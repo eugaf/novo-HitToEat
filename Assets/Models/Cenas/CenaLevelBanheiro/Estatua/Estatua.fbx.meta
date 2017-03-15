@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 58c45c2bd07604a0eb2b8a7226a429bd
+timeCreated: 1481110229
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: BackFoot_L
+    100004: BackFoot_L_end
+    100006: BackFoot_R
+    100008: BackFoot_R_end
+    100010: Belly
+    100012: Chest
+    100014: Cube.002
+    100016: //RootNode
+    100018: Foot_L
+    100020: Foot_R
+    100022: FootTips_L
+    100024: FootTips_L_end
+    100026: FootTips_R
+    100028: FootTips_R_end
+    100030: FootTracker_L
+    100032: FootTracker_L_end
+    100034: FootTracker_R
+    100036: FootTracker_R_end
+    100038: HandTracker_L
+    100040: HandTracker_L_end
+    100042: HandTracker_R
+    100044: HandTracker_R_end
+    100046: Head
+    100048: Head_end
+    100050: Hip_L
+    100052: Hip_R
+    100054: LowerArm_L
+    100056: LowerArm_R
+    100058: LowerFinger_l
+    100060: LowerFinger_l_end
+    100062: LowerFingers_R
+    100064: LowerFingers_R_end
+    100066: LowerLeg_L
+    100068: LowerLeg_R
+    100070: LowerThumb_R
+    100072: LowerThumb_R_end
+    100074: LowerUpper_L
+    100076: LowerUpper_L_end
+    100078: MiddleFinger_L
+    100080: MIddleFingers_R
+    100082: MiddleThumb_L
+    100084: MIddleThumb_R
+    100086: Neck
+    100088: Root
+    100090: Roupa
+    100092: Roupa_end
+    100094: Shoulder_L
+    100096: Shoulder_R
+    100098: UpperArm_L
+    100100: UpperArm_R
+    100102: UpperFingers_L
+    100104: UpperFingers_R
+    100106: UpperLeg_L
+    100108: UpperLeg_R
+    100110: UpperThumb_L
+    100112: UpperThumb_R
+    400000: Armature
+    400002: BackFoot_L
+    400004: BackFoot_L_end
+    400006: BackFoot_R
+    400008: BackFoot_R_end
+    400010: Belly
+    400012: Chest
+    400014: Cube.002
+    400016: //RootNode
+    400018: Foot_L
+    400020: Foot_R
+    400022: FootTips_L
+    400024: FootTips_L_end
+    400026: FootTips_R
+    400028: FootTips_R_end
+    400030: FootTracker_L
+    400032: FootTracker_L_end
+    400034: FootTracker_R
+    400036: FootTracker_R_end
+    400038: HandTracker_L
+    400040: HandTracker_L_end
+    400042: HandTracker_R
+    400044: HandTracker_R_end
+    400046: Head
+    400048: Head_end
+    400050: Hip_L
+    400052: Hip_R
+    400054: LowerArm_L
+    400056: LowerArm_R
+    400058: LowerFinger_l
+    400060: LowerFinger_l_end
+    400062: LowerFingers_R
+    400064: LowerFingers_R_end
+    400066: LowerLeg_L
+    400068: LowerLeg_R
+    400070: LowerThumb_R
+    400072: LowerThumb_R_end
+    400074: LowerUpper_L
+    400076: LowerUpper_L_end
+    400078: MiddleFinger_L
+    400080: MIddleFingers_R
+    400082: MiddleThumb_L
+    400084: MIddleThumb_R
+    400086: Neck
+    400088: Root
+    400090: Roupa
+    400092: Roupa_end
+    400094: Shoulder_L
+    400096: Shoulder_R
+    400098: UpperArm_L
+    400100: UpperArm_R
+    400102: UpperFingers_L
+    400104: UpperFingers_R
+    400106: UpperLeg_L
+    400108: UpperLeg_R
+    400110: UpperThumb_L
+    400112: UpperThumb_R
+    2300000: Cube.002
+    3300000: Cube.002
+    4300000: Cube.002
+    7400000: Armature|Caindo
+    7400002: Armature|Carregando Soco
+    7400004: Armature|Correndo
+    7400006: Armature|Dash
+    7400008: Armature|estatua
+    7400010: Armature|Fritando no fogo
+    7400012: Armature|Fritando No Laser
+    7400014: Armature|Idle
+    7400016: Armature|Levando Pisada
+    7400018: Armature|Levando Soco
+    7400020: Armature|Levantar
+    7400022: Armature|Pulando
+    7400024: Armature|Socando_Forte
+    7400026: Armature|Socando_Fraco
+    9500000: //RootNode
+    13700000: Cube.002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.3
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
