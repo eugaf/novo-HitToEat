@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour {
     {
         //Debug.Log("CHECK");
         ChecarJogadores();
-        if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro")
+		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra")
         {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
             //StartCoroutine(CriarNovoPowerUp());

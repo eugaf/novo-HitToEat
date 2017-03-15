@@ -71,8 +71,7 @@ public class Jogador : MonoBehaviour {
 	public  JogadorLevantandoStateMachine jogadorLevantandoAnimacao;
 	public  JogadorDashStateMachine jogadorDashAnimacao;
 
-	void Awake ()
-	{
+	void Awake () {
 		singleton = this;
 		//Pega os componentes necessarios
 		_rigidbody = GetComponent<Rigidbody> ();
@@ -99,14 +98,14 @@ public class Jogador : MonoBehaviour {
 		//Animacao
 		//Pega os scripts das animacoes
 		socoAnimacao = _animator.GetBehaviours<SocoAnimacaoResetar>();
-//		jogadorLevantandoAnimacao = _animator.GetBehaviour<JogadorLevantandoStateMachine>();
-//		jogadorDashAnimacao = _animator.GetBehaviour<JogadorDashStateMachine>();
+		jogadorLevantandoAnimacao = _animator.GetBehaviour<JogadorLevantandoStateMachine>();
+		jogadorDashAnimacao = _animator.GetBehaviour<JogadorDashStateMachine>();
 		//Configura a instancia do jogador nos scripts da animacao
 		foreach (SocoAnimacaoResetar animacao in socoAnimacao)
 		{
 			animacao.jogadorReferencia = this;
 		}
-	//	jogadorLevantandoAnimacao.jogadorReferencia = this;
+//		jogadorLevantandoAnimacao.jogadorReferencia = this;
 //		jogadorDashAnimacao.jogadorReferencia = this;
     }
 
