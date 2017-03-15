@@ -100,13 +100,14 @@ public class Jogador : MonoBehaviour {
 		socoAnimacao = _animator.GetBehaviours<SocoAnimacaoResetar>();
 		jogadorLevantandoAnimacao = _animator.GetBehaviour<JogadorLevantandoStateMachine>();
 		jogadorDashAnimacao = _animator.GetBehaviour<JogadorDashStateMachine>();
+	
 		//Configura a instancia do jogador nos scripts da animacao
 		foreach (SocoAnimacaoResetar animacao in socoAnimacao)
 		{
 			animacao.jogadorReferencia = this;
 		}
-//		jogadorLevantandoAnimacao.jogadorReferencia = this;
-//		jogadorDashAnimacao.jogadorReferencia = this;
+		jogadorLevantandoAnimacao.jogadorReferencia = this;
+		jogadorDashAnimacao.jogadorReferencia = this;
     }
 
 	void FixedUpdate()
