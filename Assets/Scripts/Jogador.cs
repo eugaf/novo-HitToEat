@@ -38,7 +38,7 @@ public class Jogador : MonoBehaviour {
 	public	bool	  puloPulando = false;
 //	[HideInInspector]
 	public 	bool	  puloPodePular = false;
-	public bool	  puloIntervalo = false;
+	public  bool	  puloIntervalo = false;
 	public  float	  puloPularIntervalo = 0.3f;
 	//Soco
 	public  float	  socoForca = 500f;
