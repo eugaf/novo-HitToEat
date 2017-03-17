@@ -12,36 +12,32 @@ public class CameraCenter : MonoBehaviour {
 
 	private Vector3 novaPosicao;
 
-	void FixedUpdate()
-	{
+	void FixedUpdate() {
 		Mover();
 		Zoom();
 	}
 
-	void Mover()
-	{
+	void Mover() {
 		EncontrarPosicaoMedia();
 		transform.position = Vector3.Slerp(transform.position, novaPosicao, zoomVelocidade);
 	}
 
-	void EncontrarPosicaoMedia()
-	{
+	void EncontrarPosicaoMedia() {
 		Vector3 center = new Vector3();
-		foreach (GameObject player in playerLista) 
-		{
+
+		foreach (GameObject player in playerLista) {
 			center += player.transform.position;
 		}
-		center = center / playerLista.Count;
 
+		center = center / playerLista.Count;
 		float distancia = -center.magnitude;
 
 		//Verificar os limites da camera
-		if (distancia < zoomMinimo)
-		{
+		if (distancia < zoomMinimo) {
 			distancia = zoomMinimo;
 		}
-		if (distancia > zoomMaximo)
-		{
+
+		if (distancia > zoomMaximo) {
 			distancia = zoomMaximo;
 		}
 	
@@ -51,16 +47,14 @@ public class CameraCenter : MonoBehaviour {
 		novaPosicao = center;
 	}
 
-	void Zoom()
-	{
+	void Zoom() {
 		float requiredSize = EncontrarTamanhoNecessario();
 		Vector3 newPosition = Camera.main.transform.position;
 		newPosition.y = requiredSize;
 		Camera.main.transform.position = newPosition;
 	}
 
-	float EncontrarTamanhoNecessario()
-	{
+	float EncontrarTamanhoNecessario() {
 		// Find the position the camera rig is moving towards in its local space.
 		Vector3 desiredLocalPos = transform.InverseTransformPoint(novaPosicao);
 
@@ -68,8 +62,7 @@ public class CameraCenter : MonoBehaviour {
 		float size = 0f;
 
 		// Go through all the targets...
-		for (int i = 0; i < playerLista.Count; i++)
-		{
+		for (int i = 0; i < playerLista.Count; i++) {
 			// Otherwise, find the position of the target in the camera's local space.
 			Vector3 targetLocalPos = transform.InverseTransformPoint(playerLista[i].transform.position);
 
