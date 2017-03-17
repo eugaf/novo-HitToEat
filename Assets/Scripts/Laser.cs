@@ -57,30 +57,25 @@ public class Laser : MonoBehaviour {
 					alphaLaser += Time.deltaTime * multiplicadorWidth;
 				}
 				else {
-					if (danoAtivado == false)
-					{
+					if (danoAtivado == false) {
 						startWidth = 0.5f;
 						endWidth = startWidth;
 						alphaLaser = 1f;
 						danoAtivado = true;
 					}
 
-					if (startWidth >= 0.3)
-					{
+					if (startWidth >= 0.3) {
 						startWidth -= Time.deltaTime * multiplicadorWidth * 0.5f;
 						endWidth = startWidth;
 					}
 				}
-				if (Physics.Raycast (ray, out hit, 50))
-				{
+				if (Physics.Raycast (ray, out hit, 50)) {
 					Linha.SetPosition (1, hit.point); //Laser para ao colidir com algo
-					if (hit.transform.tag == "Player" && !hit.transform.GetComponent<Jogador>().jogadorProtecaoRespawn && danoAtivado)
-					{
+					if (hit.transform.tag == "Player" && !hit.transform.GetComponent<Jogador>().jogadorProtecaoRespawn && danoAtivado) {
 						hit.transform.GetComponent<Jogador>().StartCoroutine(hit.transform.GetComponent<Jogador>().LaserTorrar(tempoLaser));
 					}
 				}
-				else 
-				{
+				else  {
 					Linha.SetPosition (1, ray.GetPoint(50)); //Distância máxima do laser
 				}
 
