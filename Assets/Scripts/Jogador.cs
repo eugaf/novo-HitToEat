@@ -55,6 +55,8 @@ public class Jogador : MonoBehaviour {
 	public  bool	  jogadorProtecaoRespawn;
 	public  float	  jogadorProtecaoRespawnDuracao = 3f;
 
+	public List<GameObject> respawnPoints;
+
 	//Componentes
 	private Rigidbody _rigidbody;
 	public  Animator  _animator;
@@ -366,15 +368,15 @@ public class Jogador : MonoBehaviour {
 			JogadorCongelar();
 			_animator.SetTrigger("FritandoNoLaser");
 			yield return new WaitForSeconds(tempoLaser);
-			//		Destroy(this.gameObject);
-			JogadorRespawn(new Vector3(Random.Range(-3, 0), Random.Range(0, 7), Random.Range(0, 4)));
+			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Count)];
+			transform.position = novoRespawn.transform.position;
             _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
 			JogadorDescongelar();
-            JogadoresVidas.singleton.VidaDiminuir(jogadorQualJogador);
-			jogadorProtecaoRespawn = true;
-			yield return new WaitForSeconds(jogadorProtecaoRespawnDuracao);
-			jogadorProtecaoRespawn = false;
+//			JogadoresVidas.singleton.VidaDiminuir(jogadorQualJogador);
+//			jogadorProtecaoRespawn = true;
+//			yield return new WaitForSeconds(jogadorProtecaoRespawnDuracao);
+//			jogadorProtecaoRespawn = false;
         }
 		yield return null;
 	}
