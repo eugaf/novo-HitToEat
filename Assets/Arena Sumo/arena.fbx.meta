@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: c3e56b0d00e57404daa458e4313af15d
-timeCreated: 1477400670
+guid: 09b993fec190246a28b2f2dd4cca3f66
+timeCreated: 1489669619
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: deer___UN
-    100004: deer___UN1
-    100006: deer___UN2
-    100008: deer_obj:deer___UN
-    100010: pCylinder1
-    100012: transform1
-    100014: transform2
-    100016: transform3
-    100018: transform4
+    100002: Lamp
+    100004: pCube1
     400000: //RootNode
-    400002: deer___UN
-    400004: deer___UN1
-    400006: deer___UN2
-    400008: deer_obj:deer___UN
-    400010: pCylinder1
-    400012: transform1
-    400014: transform2
-    400016: transform3
-    400018: transform4
-    2300000: deer___UN2
-    3300000: deer___UN2
-    4300000: deer___UN2
-    9500000: //RootNode
+    400002: Lamp
+    400004: pCube1
+    2300000: pCube1
+    3300000: pCube1
+    4300000: pCube1
   materials:
     importMaterials: 1
     materialName: 0
@@ -53,7 +38,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 15
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -87,7 +72,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
