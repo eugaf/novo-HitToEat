@@ -126,7 +126,7 @@ public class Jogador : MonoBehaviour {
 		}
 
 		//Movimentacao e soco do jogador
-		if (Input.GetAxisRaw (axisJogadorSocoBotao) != 0 && socoPodeSocar && !socoCoroutine) {
+		if (Input.GetAxisRaw (axisJogadorSocoBotao) != 0 && socoPodeSocar && !socoCoroutine && movimentoPode) {
 			//reduzir a velocidade enquanto carrega o soco
 			vertical = Input.GetAxis(axisJogadorVertical) * movimentoVelocidadeSocoEstaSocando;
 			horizontal = Input.GetAxis(axisJogadorHorizontal) * movimentoVelocidadeSocoEstaSocando;
@@ -137,7 +137,7 @@ public class Jogador : MonoBehaviour {
 					StartCoroutine(Socar());
 				}
 			}
-		} else {
+		} else if(movimentoPode) {
 			vertical = Input.GetAxis(axisJogadorVertical) * movimentoVelocidade;
 			horizontal = Input.GetAxis(axisJogadorHorizontal) * movimentoVelocidade;
 		}

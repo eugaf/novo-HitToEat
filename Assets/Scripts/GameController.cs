@@ -7,20 +7,18 @@ using System.Collections.Generic;
 public class GameController : MonoBehaviour {
 
 	public static GameController singleton;
+
     //LASERS
 	public GameObject[] lasersLista;
 	public GameObject[] powerUpsLista;
-	public float 	laserEsperaDisparo;
-	public float 	laserTempo;
+	public float 	laserEsperaDisparo, laserTempo;
 	public bool  	laserPodeLigar;
+
     //POWERUPS
-	public float 	powerUpPosicaoXMin;
-	public float 	powerUpPosicaoXMax;
-	public float	powerUpPosicaoZMin;
-	public float 	powerUpPosicaoZMax;
+	public float 	powerUpPosicaoXMin, powerUpPosicaoXMax, powerUpPosicaoZMin, powerUpPosicaoZMax;
+
     //JOGADORES
-    public int jogadoresConfirmadosLista;
-    public int numeroJogadores;
+    public int jogadoresConfirmadosLista, numeroJogadores;
     public List<GameObject> jogadoresLista;
 	public List<GameObject> meshPrefabLista;
 	public List<Color> 		corLista;
@@ -31,25 +29,24 @@ public class GameController : MonoBehaviour {
     public List<Texture> texturas_homemGalinha;
     public List<Texture> texturas_zumbi;
     public List<List<Texture>> texturasLista; // lista para armazenar listas de texturas 
+
     //INPUTS
     public List<string> inputsPlayer1;
 	public List<string> inputsPlayer2;
 	public List<string> inputsPlayer3;
 	public List<string> inputsPlayer4;
 	public List<List<string>> Jogadores_INPUTS;
+
     //CONFIRMAR
     bool podeLigar;
 
-	void Awake () 
-	{
+	void Awake () {
 		//Gerenciamento da instancia do GameController
 		if (singleton == null) {
 			singleton = this;
 		}
-		else if (singleton != this)
-		{
+		else if (singleton != this) {
 			Destroy (gameObject);
-			Debug.Log("Objeto repetido!");
 		}
 		DontDestroyOnLoad(gameObject);
 		//Encontrar os lasers existentes no level
@@ -84,66 +81,55 @@ public class GameController : MonoBehaviour {
 		numeroJogadores = 0;
 	}
 
-	void Start ()
-	{
+	void Start () {
         ChecarCena();
     }
 
-	void Update()
-	{
-		if (Input.GetButtonDown("Jogador_1_Comecar"))
-		{
+	void Update() {
+//		if (Input.GetButtonDown("Jogador_1_Comecar")) {
 //            ReiniciarJogo();
-		}
+//		}
 	}
 
-	public void TrocaCena()
-	{
+	public void TrocaCena() {
 		SceneManager.LoadScene(1);
         Invoke("ChecarCena", 3);
     }
 
-    public void ReiniciarJogo()
-    {
+    public void ReiniciarJogo() {
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
 
-    public void ChecarCena()
-    {
+    public void ChecarCena() {
         //Debug.Log("CHECK");
         ChecarJogadores();
-		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra")
-        {
+		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra") {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
             //StartCoroutine(CriarNovoPowerUp());
             StartCoroutine(LaserLigar());
         }
-        if (SceneManager.GetActiveScene().name == "CenaSelecaoDePersonagem")
-        {
+
+        if (SceneManager.GetActiveScene().name == "CenaSelecaoDePersonagem") {
             jogadoresLista[0].GetComponentInChildren<SelecaoPersonagem>().podeParticipar = true;
             //jogadoresLista[0].GetComponentInChildren<SelecaoPersonagem>().modo.text = "Troca PRESONAGEM";
         }
     }
 
-    public void ChecarJogadores()
-    {
+    public void ChecarJogadores() {
         jogadoresLista.Clear();
         jogadoresLista.AddRange(GameObject.FindGameObjectsWithTag("Player"));
         //Deixar em ordem alfabetica a lista de jogadores
         jogadoresLista.Sort(
-            delegate (GameObject Jogador1, GameObject Jogador2)
-            {
+            delegate (GameObject Jogador1, GameObject Jogador2) {
                 return Jogador1.name.CompareTo(Jogador2.name);
             }
         );
     }
 
 	//COROUTINES
-	public IEnumerator LaserLigar()
-	{
-        if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro")
-        {
+	public IEnumerator LaserLigar() {
+		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra") {
             yield return new WaitForSeconds(laserEsperaDisparo);
             int i = Random.Range(0, lasersLista.Length);
 			if (!lasersLista[i].GetComponent<Laser>().Linha.enabled) {
@@ -157,8 +143,7 @@ public class GameController : MonoBehaviour {
 	/// Criar um power up na posicao x min e max, y ja predefinida e z min e max
 	/// </summary>
 	/// <returns>null</returns>
-	public IEnumerator CriarNovoPowerUp()
-	{
+	public IEnumerator CriarNovoPowerUp() {
 		yield return new WaitForSeconds(Random.Range(5,10));
 		Instantiate(powerUpsLista[0], new Vector3(Random.Range(powerUpPosicaoXMin, powerUpPosicaoXMax),6,Random.Range(powerUpPosicaoZMin, powerUpPosicaoZMax)), Quaternion.identity);
 		StartCoroutine(CriarNovoPowerUp());
@@ -171,10 +156,8 @@ public class GameController : MonoBehaviour {
 	/// <param name="meuPowerUp">Tipo do PowerUp</param>
 	/// <param name="jogadorInstancia">Jogador que pegou o PowerUp</param>
 	/// <param name="powerUpDuracao">Duracao Do Efeito do PowerUp</param>
-	public IEnumerator PowerUpAcao(PowerUp powerUpInstancia, PowerUp.powerUpType powerUpTipo, Jogador jogadorInstancia, float powerUpDuracao)
-	{
-		if (powerUpTipo == PowerUp.powerUpType.Agilidade && jogadorInstancia.puloForca == jogadorInstancia.puloForcaInicial)
-		{
+	public IEnumerator PowerUpAcao(PowerUp powerUpInstancia, PowerUp.powerUpType powerUpTipo, Jogador jogadorInstancia, float powerUpDuracao) {
+		if (powerUpTipo == PowerUp.powerUpType.Agilidade && jogadorInstancia.puloForca == jogadorInstancia.puloForcaInicial) {
 			jogadorInstancia.movimentoVelocidade = powerUpInstancia.powerUpAgilidadeMovimentoVelocidade;
 			jogadorInstancia.puloForca = powerUpInstancia.powerUpAgilidadePuloForca;
 			jogadorInstancia.powerUpAgilidadeMultiplicador *= 2;
