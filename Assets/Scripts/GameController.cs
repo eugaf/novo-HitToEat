@@ -64,15 +64,13 @@ public class GameController : MonoBehaviour {
         texturasLista.Add(texturas_alien);
         //Deixar em ordem alfabetica as meshs
         meshPrefabLista.Sort(
-			delegate (GameObject meshPrefab1, GameObject meshPrefab2)
-			{
+			delegate (GameObject meshPrefab1, GameObject meshPrefab2) {
 				return meshPrefab1.name.CompareTo (meshPrefab2.name);
 			}
 		);
 
         texturasLista.Sort (
-		    delegate (List<Texture> lista1, List<Texture> lista2) 
-            {
+		    delegate (List<Texture> lista1, List<Texture> lista2) {
 			    return lista1.ToString().CompareTo (lista2.ToString ());
 		    }
         );

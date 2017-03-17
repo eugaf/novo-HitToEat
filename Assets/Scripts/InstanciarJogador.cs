@@ -46,17 +46,24 @@ public class InstanciarJogador : MonoBehaviour
 //            {
 //                cameraZoomScript.player2 = JogadorInstanciado;
 //            }
+			for(int j = 0; i < cameraZoomScript.playerLista.Length; i++ ) {
+				JogadorInstanciado.GetComponent<Jogador>().axisJogadorVertical = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[j]][0]; // primeiro [i] para qual a ID do personagem e segundo [] para qual string dentro da lista
+				JogadorInstanciado.GetComponent<Jogador>().axisJogadorHorizontal = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[j]][1];
+				JogadorInstanciado.GetComponent<Jogador>().axisJogadorPulo = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[j]][2];
+				JogadorInstanciado.GetComponent<Jogador>().axisJogadorSocoBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[j]][3];
+				JogadorInstanciado.GetComponent<Jogador>().axisJogadorRolarBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[j]][4];
 
-			cameraZoomScript.playerLista.Add(JogadorInstanciado);
+			}
+	//		cameraZoomScript.playerLista.Add(JogadorInstanciado);
 
             //JogadorInstanciado.GetComponent <Jogador> ().enabled = true; // Força ativação do scripts Jogador
 
             //Pega string dentro da lista de inputs que esta dentro da lista de inputs dos jogadores
-            JogadorInstanciado.GetComponent<Jogador>().axisJogadorVertical = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][0]; // primeiro [i] para qual a ID do personagem e segundo [] para qual string dentro da lista
-            JogadorInstanciado.GetComponent<Jogador>().axisJogadorHorizontal = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][1];
-            JogadorInstanciado.GetComponent<Jogador>().axisJogadorPulo = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][2];
-            JogadorInstanciado.GetComponent<Jogador>().axisJogadorSocoBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][3];
-            JogadorInstanciado.GetComponent<Jogador>().axisJogadorRolarBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][4];
+//            JogadorInstanciado.GetComponent<Jogador>().axisJogadorVertical = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][0]; // primeiro [i] para qual a ID do personagem e segundo [] para qual string dentro da lista
+//            JogadorInstanciado.GetComponent<Jogador>().axisJogadorHorizontal = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][1];
+//            JogadorInstanciado.GetComponent<Jogador>().axisJogadorPulo = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][2];
+//            JogadorInstanciado.GetComponent<Jogador>().axisJogadorSocoBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][3];
+//            JogadorInstanciado.GetComponent<Jogador>().axisJogadorRolarBotao = gameController.Jogadores_INPUTS[gameController.idJogadoresSelecionados[i]][4];
 
         }
     }

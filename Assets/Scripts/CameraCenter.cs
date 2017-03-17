@@ -4,13 +4,17 @@ using System.Collections.Generic;
 
 public class CameraCenter : MonoBehaviour {
 
-	public List<GameObject> playerLista;
+	public GameObject[] playerLista;
 	Vector3 midVector;
 	public float zoomMinimo;
 	public float zoomMaximo;
 	public float zoomVelocidade;
 
 	private Vector3 novaPosicao;
+
+	void Start () {
+		playerLista = GameObject.FindGameObjectsWithTag("Player");
+	}
 
 	void FixedUpdate() {
 		Mover();
@@ -29,7 +33,7 @@ public class CameraCenter : MonoBehaviour {
 			center += player.transform.position;
 		}
 
-		center = center / playerLista.Count;
+		center = center / playerLista.Length;
 		float distancia = -center.magnitude;
 
 		//Verificar os limites da camera
@@ -62,7 +66,7 @@ public class CameraCenter : MonoBehaviour {
 		float size = 0f;
 
 		// Go through all the targets...
-		for (int i = 0; i < playerLista.Count; i++) {
+		for (int i = 0; i < playerLista.Length; i++) {
 			// Otherwise, find the position of the target in the camera's local space.
 			Vector3 targetLocalPos = transform.InverseTransformPoint(playerLista[i].transform.position);
 

@@ -55,7 +55,7 @@ public class Jogador : MonoBehaviour {
 	public  bool	  jogadorProtecaoRespawn;
 	public  float	  jogadorProtecaoRespawnDuracao = 3f;
 
-	public List<GameObject> respawnPoints;
+	public GameObject[] respawnPoints;
 
 	//Componentes
 	private Rigidbody _rigidbody;
@@ -109,6 +109,8 @@ public class Jogador : MonoBehaviour {
 		}
 		jogadorLevantandoAnimacao.jogadorReferencia = this;
 		jogadorDashAnimacao.jogadorReferencia = this;
+
+		respawnPoints = GameObject.FindGameObjectsWithTag("Respawn");
     }
 
 	void FixedUpdate() {
@@ -368,7 +370,7 @@ public class Jogador : MonoBehaviour {
 			JogadorCongelar();
 			_animator.SetTrigger("FritandoNoLaser");
 			yield return new WaitForSeconds(tempoLaser);
-			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Count)];
+			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
             _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
