@@ -102,7 +102,7 @@ public class GameController : MonoBehaviour {
     public void ChecarCena() {
         //Debug.Log("CHECK");
         ChecarJogadores();
-		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra") {
+		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra" || SceneManager.GetActiveScene().name == "LevelCenaArena") {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
             //StartCoroutine(CriarNovoPowerUp());
             StartCoroutine(LaserLigar());
@@ -127,7 +127,7 @@ public class GameController : MonoBehaviour {
 
 	//COROUTINES
 	public IEnumerator LaserLigar() {
-		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra") {
+		if (SceneManager.GetActiveScene().name == "CenaLevelCozinha" || SceneManager.GetActiveScene().name == "CenaLevelBanheiro" || SceneManager.GetActiveScene().name == "CenaLevelQuadra" || SceneManager.GetActiveScene().name == "LevelCenaArena") {
             yield return new WaitForSeconds(laserEsperaDisparo);
             int i = Random.Range(0, lasersLista.Length);
 			if (!lasersLista[i].GetComponent<Laser>().Linha.enabled) {
