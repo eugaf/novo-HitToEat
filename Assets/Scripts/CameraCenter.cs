@@ -44,8 +44,9 @@ public class CameraCenter : MonoBehaviour {
 		if (distancia > zoomMaximo) {
 			distancia = zoomMaximo;
 		}
-	
+
 		center = center - transform.forward * distancia;
+		center.z = center.z*2;
 		center.y = transform.position.y;
 
 		novaPosicao = center;
