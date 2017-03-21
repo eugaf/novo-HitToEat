@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
 
     //JOGADORES
     public int jogadoresConfirmadosLista, numeroJogadores;
+	public GameObject[] HUDVidas;
     public List<GameObject> jogadoresLista;
 	public List<GameObject> meshPrefabLista;
 	public List<Color> 		corLista;
@@ -81,12 +82,14 @@ public class GameController : MonoBehaviour {
 
 	void Start () {
         ChecarCena();
+		HUDVidas = GameObject.FindGameObjectsWithTag("HUD");
     }
 
 	void Update() {
 //		if (Input.GetButtonDown("Jogador_1_Comecar")) {
 //            ReiniciarJogo();
 //		}
+
 	}
 
 	public void TrocaCena() {
@@ -98,6 +101,8 @@ public class GameController : MonoBehaviour {
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
+
+
 
     public void ChecarCena() {
         //Debug.Log("CHECK");
@@ -123,6 +128,14 @@ public class GameController : MonoBehaviour {
                 return Jogador1.name.CompareTo(Jogador2.name);
             }
         );
+
+		if(jogadoresLista.Count > HUDVidas.Length) {
+			int cont = jogadoresLista.Count - HUDVidas.Length;
+			Debug.Log("cont: " + cont);
+			for(int i = cont+HUDVidas.Length; i > HUDVidas.Length; i--) {
+				Debug.Log(i);
+			}
+		}
     }
 
 	//COROUTINES
