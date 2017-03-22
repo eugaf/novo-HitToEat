@@ -9,6 +9,7 @@ public class CameraCenter : MonoBehaviour {
 	public float zoomMinimo;
 	public float zoomMaximo;
 	public float zoomVelocidade;
+	public float maxZ;
 
 	private Vector3 novaPosicao;
 
@@ -23,7 +24,9 @@ public class CameraCenter : MonoBehaviour {
 
 	void Mover() {
 		EncontrarPosicaoMedia();
+		if(novaPosicao.z > maxZ) {
 		transform.position = Vector3.Slerp(transform.position, novaPosicao, zoomVelocidade);
+		}
 	}
 
 	void EncontrarPosicaoMedia() {
@@ -35,6 +38,8 @@ public class CameraCenter : MonoBehaviour {
 
 		center = center / playerLista.Length;
 		float distancia = -center.magnitude;
+
+		Debug.Log(distancia);
 
 		//Verificar os limites da camera
 		if (distancia < zoomMinimo) {

@@ -186,7 +186,7 @@ public class Jogador : MonoBehaviour {
 			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && jogadorNoChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
 				//Adiciona a forca para cima com o modo impulso, dando mais realismo ao pulo
 				jogadorNoChao = false;
-				_rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
+				_rigidbody.AddForce (Vector3.up * puloForca, ForceMode.Force);
 				_animator.SetBool("Pular",true);
 				StartCoroutine(PularIntervalo());
 			}
