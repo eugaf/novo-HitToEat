@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 
 [SerializeField]
@@ -82,7 +83,6 @@ public class GameController : MonoBehaviour {
 
 	void Start () {
         ChecarCena();
-		HUDVidas = GameObject.FindGameObjectsWithTag("HUD");
     }
 
 	void Update() {
@@ -128,12 +128,13 @@ public class GameController : MonoBehaviour {
                 return Jogador1.name.CompareTo(Jogador2.name);
             }
         );
+		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
 
-		if(jogadoresLista.Count > HUDVidas.Length) {
-			int cont = jogadoresLista.Count - HUDVidas.Length;
-			for(int i = cont+HUDVidas.Length; i > HUDVidas.Length; i--) {
-				Debug.Log(i);
-			}
+		Debug.Log("Jogadores: " + jogadoresLista.Count);
+		Debug.Log("Hud: " + HUDVidas.Length);
+
+		for(int i = jogadoresLista.Count; i < HUDVidas.Length; i++) {
+			HUDVidas[i].SetActive(false);
 		}
     }
 
