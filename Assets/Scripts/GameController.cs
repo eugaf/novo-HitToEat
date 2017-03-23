@@ -131,7 +131,6 @@ public class GameController : MonoBehaviour {
 
 		if(jogadoresLista.Count > HUDVidas.Length) {
 			int cont = jogadoresLista.Count - HUDVidas.Length;
-			Debug.Log("cont: " + cont);
 			for(int i = cont+HUDVidas.Length; i > HUDVidas.Length; i--) {
 				Debug.Log(i);
 			}
