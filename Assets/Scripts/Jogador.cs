@@ -373,8 +373,6 @@ public class Jogador : MonoBehaviour {
 			yield return new WaitForSeconds(tempoLaser);
 			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
-			vidas--;
-	//		Debug.Log(vidas);
             _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
 			JogadorDescongelar();

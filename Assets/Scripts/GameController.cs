@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
@@ -88,7 +89,14 @@ public class GameController : MonoBehaviour {
 	void Update() {
 //		if (Input.GetButtonDown("Jogador_1_Comecar")) {
 //            ReiniciarJogo();
-//		}
+		//		}
+
+		for(int i = 0; i < jogadoresLista.Count; i++) {
+			Jogador jogadorScript = jogadoresLista[i].GetComponent<Jogador>();
+			Text vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
+
+			vidasText.text = "oi";
+		}
 
 	}
 
@@ -129,9 +137,6 @@ public class GameController : MonoBehaviour {
             }
         );
 		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
-
-		Debug.Log("Jogadores: " + jogadoresLista.Count);
-		Debug.Log("Hud: " + HUDVidas.Length);
 
 		for(int i = jogadoresLista.Count; i < HUDVidas.Length; i++) {
 			HUDVidas[i].SetActive(false);
