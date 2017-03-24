@@ -373,13 +373,10 @@ public class Jogador : MonoBehaviour {
 			yield return new WaitForSeconds(tempoLaser);
 			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
+			vidas--;
             _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
 			JogadorDescongelar();
-//			JogadoresVidas.singleton.VidaDiminuir(jogadorQualJogador);
-//			jogadorProtecaoRespawn = true;
-//			yield return new WaitForSeconds(jogadorProtecaoRespawnDuracao);
-//			jogadorProtecaoRespawn = false;
         }
 		yield return null;
 	}

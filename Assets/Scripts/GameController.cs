@@ -93,9 +93,12 @@ public class GameController : MonoBehaviour {
 
 		for(int i = 0; i < jogadoresLista.Count; i++) {
 			Jogador jogadorScript = jogadoresLista[i].GetComponent<Jogador>();
-			Text vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
-
-			vidasText.text = "oi";
+			Text[] vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
+			for(int j =0; j < vidasText.Length; j++) {
+				if(vidasText[j].tag == "Vidas") {
+					vidasText[j].text = jogadorScript.vidas.ToString();
+				}
+			}
 		}
 
 	}
