@@ -16,6 +16,7 @@ public class Jogador : MonoBehaviour {
 	//Movimento
 	[HideInInspector]
 	public  bool	  movimentoPode = true, jogadorNoChao;
+	public	bool		noChao;
 	[HideInInspector]
 	public  float	  movimentoVelocidadeInicial = 0f;
 	[Range(0,10)]
@@ -25,12 +26,11 @@ public class Jogador : MonoBehaviour {
 	private bool	  jogadorCorrendo;
 
 	//Pulo
-	[HideInInspector]
-	public  float 	  puloForcaInicial = 6f;
-	[HideInInspector]
-	public	bool	  puloPulando = false;
-	public 	bool	  puloPodePular = false, puloIntervalo = false;
-	public  float	  puloPularIntervalo = 0.3f, puloForca = 7f;
+	public float		puloForcaInicial = 3f;
+	public 	bool	  puloPodePular = true;
+	public  float	  puloIntervalo, puloIntervaloInicial = 0.3f, puloForca = 7f;
+
+
 
 	//Soco
 	public  float	  socoForca = 500f;
@@ -85,9 +85,9 @@ public class Jogador : MonoBehaviour {
 		movimentoPode = true;
 
 		//Pulo
-		puloPulando = false;
-		puloPodePular = true;
-		puloIntervalo = false;
+//		puloPulando = false;
+//		puloPodePular = true;
+//		puloIntervalo = false;
 
 		//Laser
 		laserFritando = false;
@@ -176,25 +176,40 @@ public class Jogador : MonoBehaviour {
 		}
 
 		//Se estiver no chao
-		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(-0.25f,-.1f,-0.25f), out hit,Quaternion.identity,1 , 1 >> 0)){
-			if (hit.transform.gameObject.isStatic  || hit.transform.tag == "Movivel") {
-				jogadorNoChao = true;
-				_animator.ResetTrigger("NoAr");
-			}
+//		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(-0.25f,-.1f,-0.25f), out hit,Quaternion.identity,1 , 1 >> 0)){
+//			if (hit.transform.gameObject.isStatic  || hit.transform.tag == "Movivel") {
+//				jogadorNoChao = true;
+//				_animator.ResetTrigger("NoAr");
+//			}
+//		}
+
+		if(!puloPodePular) {
+			puloIntervalo -= Time.deltaTime;
+		} else {
+			puloIntervalo = puloIntervaloInicial;
+		}
+
+		if(Input.GetAxisRaw(axisJogadorPulo) > 0 && noChao && !laserFritando){
+			puloPodePular = false;
+			_animator.SetBool("Pular", true);
+			_rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
+			_animator.SetTrigger("NoAr");
+//			Debug.Log("Pular!");
+		}
 
 			//Se posso pular
-			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && jogadorNoChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
-				//Adiciona a forca para cima com o modo impulso, dando mais realismo ao pulo
-				jogadorNoChao = false;
-				_rigidbody.AddForce (Vector3.up * puloForca, ForceMode.Force);
-				_animator.SetBool("Pular",true);
-				StartCoroutine(PularIntervalo());
-			}
-		} else { //Se estou no ar
-			_animator.SetTrigger("NoAr");
-			_animator.SetBool("Pular",false);
-			jogadorNoChao = false;
-		}
+//			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && jogadorNoChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
+//				//Adiciona a forca para cima com o modo impulso, dando mais realismo ao pulo
+//				jogadorNoChao = false;
+//				_rigidbody.AddForce (Vector3.up * puloForca, ForceMode.Force);
+//				_animator.SetBool("Pular",true);
+//				StartCoroutine(PularIntervalo());
+//			}
+//		} else { //Se estou no ar
+//			_animator.SetTrigger("NoAr");
+//			_animator.SetBool("Pular",false);
+//			jogadorNoChao = false;
+//		}
 		//Detectar se ha um player em cima
 //		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(0.25f,5,0.25f), out hit,Quaternion.identity,2f)){
 //			//Se o jogador esta em cima de um jogador, pular e fazer o outro se abaixar
@@ -283,6 +298,19 @@ public class Jogador : MonoBehaviour {
 		if (other.transform.tag == "Movivel" && rolamentoTravar && other.transform.GetComponent<ParapeitoQuebrarSoco>() != null) {
 			other.transform.GetComponent<ParapeitoQuebrarSoco>().ParapeitoDestruir();
 		}
+
+		if(other.transform.tag == "Chao") {
+			noChao = true;
+			_animator.ResetTrigger("NoAr");
+			puloPodePular = true;
+		}
+	}
+
+	void OnCollisionExit (Collision other) {
+		if(other.transform.tag == "Chao") {
+			noChao = false;
+		//	_animator.SetBool("Pular",false);
+		}
 	}
 
 	//Coroutines
@@ -335,21 +363,20 @@ public class Jogador : MonoBehaviour {
 	/// Intervalo de pulo para o jogador nao ficar flutuando
 	/// </summary>
 	/// <returns>The intervalo.</returns>
-	private IEnumerator PularIntervalo() {
-		if (!puloIntervalo) {
-//			StopCoroutine(PularIntervalo());
-			yield return new WaitForSeconds (1);
-			do {
-				puloIntervalo = true;
-				puloPodePular = false;
-				yield return new WaitForSeconds(1 * Time.deltaTime);
-			} while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && Input.GetAxisRaw(axisJogadorPulo) != 0);
-
-			yield return new WaitForSeconds(puloPularIntervalo);
-			puloIntervalo = false;
-			puloPodePular = true;
-		}
-	}
+//	private IEnumerator PularIntervalo() {
+//		if (!puloIntervalo) {
+//			yield return new WaitForSeconds (1);
+//			do {
+//				puloIntervalo = true;
+//				puloPodePular = false;
+//				yield return new WaitForSeconds(1 * Time.deltaTime);
+//			} while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && Input.GetAxisRaw(axisJogadorPulo) != 0);
+//
+//			yield return new WaitForSeconds(puloPularIntervalo);
+//			puloIntervalo = false;
+//			puloPodePular = true;
+//		}
+//	}
 
 	/// <summary>
 	/// Reduz a velocidade do jogador ao levar uma pisada na cabeca
@@ -374,6 +401,7 @@ public class Jogador : MonoBehaviour {
 			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
 			vidas--;
+			noChao = true;
             _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
 			JogadorDescongelar();
@@ -385,6 +413,6 @@ public class Jogador : MonoBehaviour {
 	public void AnimacaoDashDestravarMovimento(){
 		rolamentoTravar = false;
 		movimentoPode = false;
-		puloPodePular = true;
+	//	puloPodePular = true;
 	}
 }

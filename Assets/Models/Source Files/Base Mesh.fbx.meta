@@ -1543,7 +1543,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Pulando
       takeName: Armature|Pulando
-      firstFrame: 0
+      firstFrame: 2
       lastFrame: 10
       wrapMode: 0
       orientationOffsetY: 0
