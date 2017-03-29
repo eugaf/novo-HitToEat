@@ -25,7 +25,7 @@ public class JogadoresVidas : MonoBehaviour {
         {
             if (jogador1Vidas == 1)
             {
-                GameController.singleton.ReiniciarJogo();
+//                GameController.singleton.ReiniciarJogo();
             } else
             {
                 jogador1Vidas--;
@@ -35,7 +35,7 @@ public class JogadoresVidas : MonoBehaviour {
         {
             if (jogador2Vidas == 1)
             {
-                GameController.singleton.ReiniciarJogo();
+  //              GameController.singleton.ReiniciarJogo();
             } else
             {
                 jogador2Vidas--;

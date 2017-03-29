@@ -29,7 +29,7 @@ public class PowerUp : MonoBehaviour {
 			switch (meuPowerUp) 
 			{
 				case powerUpType.Agilidade:
-				GameController.singleton.StartCoroutine(GameController.singleton.PowerUpAcao(singleton,meuPowerUp,other.transform.GetComponent<Jogador>(),5f));
+//				GameController.singleton.StartCoroutine(GameController.singleton.PowerUpAcao(singleton,meuPowerUp,other.transform.GetComponent<Jogador>(),5f));
 				Destroy(gameObject);
 					break;
 				default:

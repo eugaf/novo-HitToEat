@@ -299,7 +299,7 @@ public class Jogador : MonoBehaviour {
 			other.transform.GetComponent<ParapeitoQuebrarSoco>().ParapeitoDestruir();
 		}
 
-		if(other.transform.tag == "Chao") {
+		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
 			noChao = true;
 			_animator.ResetTrigger("NoAr");
 			puloPodePular = true;
@@ -307,7 +307,7 @@ public class Jogador : MonoBehaviour {
 	}
 
 	void OnCollisionExit (Collision other) {
-		if(other.transform.tag == "Chao") {
+		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
 			noChao = false;
 		//	_animator.SetBool("Pular",false);
 		}
