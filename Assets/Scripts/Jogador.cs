@@ -9,16 +9,14 @@ public class Jogador : MonoBehaviour {
 	
 	//Inputs
 	public  static    Jogador   singleton;
-	[HideInInspector]
-    public  int       jogadorQualJogador;
 	public  string 	  axisJogadorVertical, axisJogadorHorizontal, axisJogadorPulo, axisJogadorSocoBotao, axisJogadorRolarBotao;
 
 	//Movimento
 	[HideInInspector]
-	public  bool	  movimentoPode = true, jogadorNoChao;
+	public  bool	  movimentoPode = true;
 	public	bool		noChao;
 	[HideInInspector]
-	public  float	  movimentoVelocidadeInicial = 0f;
+	public  float	  movimentoVelocidadeInicial = 25f;
 	[Range(0,10)]
 	public  float 	  movimentoVelocidade = 6f;
 	public  float	  vertical = 0, horizontal = 0, movimentoVelocidadeSocoEstaSocando = 2f, rotacaoVelocidade = 20f;
@@ -26,11 +24,8 @@ public class Jogador : MonoBehaviour {
 	private bool	  jogadorCorrendo;
 
 	//Pulo
-	public float		puloForcaInicial = 3f;
 	public 	bool	  puloPodePular = true;
 	public  float	  puloIntervalo, puloIntervaloInicial = 0.3f, puloForca = 7f;
-
-
 
 	//Soco
 	public  float	  socoForca = 500f;
@@ -41,19 +36,14 @@ public class Jogador : MonoBehaviour {
 	private bool 	  socoCoroutine;
 
 	//Rolamento
-	private float	  rolamentoVelocidade, rolamentoVelocidadeMultiplicador = 0.25f, rolamentoDuracao = 0.5f, rolamentoIntervalo = 1f;
+	private float	  rolamentoVelocidade, rolamentoVelocidadeMultiplicador = 0.25f;
 	private Vector3	  rolamentoMovimentoDirecao;
 	public  bool      rolamentoTravar;
 
 	//Laser
 	public  bool	  laserFritando = false;
 
-	//PowerUps
-	public  float     powerUpAgilidadeMultiplicador;
-
 	//Outros
-	public  bool	  jogadorProtecaoRespawn;
-	public  float	  jogadorProtecaoRespawnDuracao = 3f;
 	public	int		  vidas = 10;
 
 	public GameObject[] respawnPoints;
@@ -64,6 +54,10 @@ public class Jogador : MonoBehaviour {
 	public  SocoAnimacaoResetar[] socoAnimacao;
 	public  JogadorLevantandoStateMachine jogadorLevantandoAnimacao;
 	public  JogadorDashStateMachine jogadorDashAnimacao;
+
+	//Audio
+	AudioSource 		audio;
+	public AudioClip 	pulo;
 
 	void Awake () {
 		singleton = this;
@@ -92,12 +86,6 @@ public class Jogador : MonoBehaviour {
 		//Laser
 		laserFritando = false;
 
-		//Outros
-		jogadorProtecaoRespawn = false;
-
-		//IMPORTANTE pois se o valor for 0 a animaçãode socar nao funciona
-		powerUpAgilidadeMultiplicador = 1f;
-
 		//Animacao
 		//Pega os scripts das animacoes
 		socoAnimacao = _animator.GetBehaviours<SocoAnimacaoResetar>();
@@ -114,6 +102,10 @@ public class Jogador : MonoBehaviour {
 		respawnPoints = GameObject.FindGameObjectsWithTag("Respawn");
     }
 
+	void Start () {
+		audio = GetComponent<AudioSource>();
+	}
+
 	void FixedUpdate() {
 		//variavel para guardar as informacoes do que foi acertado
 		RaycastHit hit = new RaycastHit();
@@ -121,7 +113,7 @@ public class Jogador : MonoBehaviour {
 		if (!movimentoPode) {
 			if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(-0.25f,-5,-0.25f), out hit,Quaternion.identity,1 , 1 >> 0)){
 				if (hit.transform.gameObject.isStatic || hit.transform.tag == "Movivel") {
-					jogadorNoChao = true;
+					noChao = true;
 					_animator.ResetTrigger("NoAr");
 				}
 			}
@@ -146,7 +138,7 @@ public class Jogador : MonoBehaviour {
 		}
 
 		//Verificar o rolamento
-		if (Input.GetButtonDown(axisJogadorRolarBotao) && _animator.GetCurrentAnimatorStateInfo(0).IsName("Correndo") && jogadorCorrendo && _animator.GetBool("Correndo") && jogadorNoChao && !rolamentoTravar) {
+		if (Input.GetButtonDown(axisJogadorRolarBotao) && _animator.GetCurrentAnimatorStateInfo(0).IsName("Correndo") && jogadorCorrendo && _animator.GetBool("Correndo") && noChao && !rolamentoTravar) {
 			_animator.SetBool("Dash",true);
 		}
 		//Verificar se o jogador esta correndo
@@ -178,7 +170,7 @@ public class Jogador : MonoBehaviour {
 		//Se estiver no chao
 //		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(-0.25f,-.1f,-0.25f), out hit,Quaternion.identity,1 , 1 >> 0)){
 //			if (hit.transform.gameObject.isStatic  || hit.transform.tag == "Movivel") {
-//				jogadorNoChao = true;
+//				noChao = true;
 //				_animator.ResetTrigger("NoAr");
 //			}
 //		}
@@ -194,13 +186,14 @@ public class Jogador : MonoBehaviour {
 			_animator.SetBool("Pular", true);
 			_rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
 			_animator.SetTrigger("NoAr");
+			audio.PlayOneShot(pulo);
 //			Debug.Log("Pular!");
 		}
 
 			//Se posso pular
-//			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && jogadorNoChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
+//			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && noChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
 //				//Adiciona a forca para cima com o modo impulso, dando mais realismo ao pulo
-//				jogadorNoChao = false;
+//				noChao = false;
 //				_rigidbody.AddForce (Vector3.up * puloForca, ForceMode.Force);
 //				_animator.SetBool("Pular",true);
 //				StartCoroutine(PularIntervalo());
@@ -208,7 +201,7 @@ public class Jogador : MonoBehaviour {
 //		} else { //Se estou no ar
 //			_animator.SetTrigger("NoAr");
 //			_animator.SetBool("Pular",false);
-//			jogadorNoChao = false;
+//			noChao = false;
 //		}
 		//Detectar se ha um player em cima
 //		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(0.25f,5,0.25f), out hit,Quaternion.identity,2f)){
@@ -267,7 +260,7 @@ public class Jogador : MonoBehaviour {
 		if (col.gameObject.isStatic == false) {
 			if (!col.isTrigger) {
 				//Verificar se acertou um jogador ou um objeto movivel e esta socando
-				if (col.tag == "Player" && !col.GetComponent<Jogador>().jogadorProtecaoRespawn || col.tag == "Movivel") {
+				if (col.tag == "Player" || col.tag == "Movivel") {
 
 //					if(col.transform.name == "SocoDetector"){
 //						if(col.transform.parent.gameObject.GetComponent<Jogador>().socoEstaSocando == true){
@@ -326,7 +319,7 @@ public class Jogador : MonoBehaviour {
 			socoPodeSocar = false;
 
 			do {
-				increase += Time.deltaTime * powerUpAgilidadeMultiplicador;
+				increase += Time.deltaTime;
 				_animator.SetLayerWeight(1, increase);
 				socoCarregado += socoForcaInicio * Time.deltaTime;
 				yield return new WaitForSeconds(0.05f * Time.deltaTime);
@@ -400,9 +393,9 @@ public class Jogador : MonoBehaviour {
 			yield return new WaitForSeconds(tempoLaser);
 			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
+			_animator.ResetTrigger("FritandoNoLaser");
 			vidas--;
 			noChao = true;
-            _animator.ResetTrigger("FritandoNoLaser");
 			laserFritando = false;
 			JogadorDescongelar();
         }

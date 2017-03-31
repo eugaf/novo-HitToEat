@@ -71,7 +71,7 @@ public class Laser : MonoBehaviour {
 				}
 				if (Physics.Raycast (ray, out hit, 50)) {
 					Linha.SetPosition (1, hit.point); //Laser para ao colidir com algo
-					if (hit.transform.tag == "Player" && !hit.transform.GetComponent<Jogador>().jogadorProtecaoRespawn && danoAtivado) {
+					if (hit.transform.tag == "Player" && danoAtivado) {
 						hit.transform.GetComponent<Jogador>().StartCoroutine(hit.transform.GetComponent<Jogador>().LaserTorrar(tempoLaser));
 					}
 				}

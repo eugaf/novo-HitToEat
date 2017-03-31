@@ -10,7 +10,7 @@ public class ParapeitoQuebrarSoco : MonoBehaviour {
 
 
 	public void ParapeitoDestruir(){
-		GetComponent<BoxCollider>().enabled = false;
+		GetComponentInChildren<BoxCollider>().enabled = false;
 		VersaoIntacta.SetActive(false);
 		VersaoQuebrada.SetActive(true);
 
