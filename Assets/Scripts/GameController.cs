@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour {
 
 	public GameObject[] pPos, p;
 	public GameObject[] listaPersonagens;
+	public Material[]			 baseMaterials;
+	public SkinnedMeshRenderer[] jogadoresMaterials;
+	public int[] 		pP;
+	public float timer = 0;
 
     //LASERS
 	public GameObject[] lasersLista;
@@ -45,15 +49,28 @@ public class GameController : MonoBehaviour {
 //		if(cenaAtual.name != "Fim") {
 //			Debug.Log("Cena ativa: " + cenaAtual.name);
 		//		}
-		CriaPersonagensLobby(0);
 	}
 
 	void Start () {
+
+
 		if(Application.loadedLevelName != "Lobby" || Application.loadedLevelName != "Menu") {
 			ChecarCena();
 		}
 
+		CriaPersonagensLobby();
+
+		for(int i = 0 ; i < 4; i++) {
+			jogadoresMaterials[i] = p[i].GetComponentInChildren<SkinnedMeshRenderer>();
+			jogadoresMaterials [i].material = baseMaterials[i];
+		}
     }
+
+	void FixedUpdate() {
+		if(timer < 3) {
+		timer += Time.deltaTime;
+		}
+	}
 
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -72,8 +89,15 @@ public class GameController : MonoBehaviour {
 //			Invoke("Start", .5f);
 		}
 
-		p[0].transform.position = pPos[0].transform.position;
+		if(Input.GetKeyDown(KeyCode.LeftArrow)) {
+			MudaPersonagem(0);
+		}
 
+		if(timer < 2.8f) {
+			for(int i = 0; i < 4; i++) {
+				p[i].transform.position = pPos[i].transform.position;
+			}
+		}
 
 
 //		for(int i = 0; i < jogadoresLista.Count; i++) {
@@ -92,11 +116,15 @@ public class GameController : MonoBehaviour {
 
 	}
 
-	void CriaPersonagensLobby (int numeroPersonagens) {
-		switch (numeroPersonagens) {
-		case 0:
-			p[0] = Instantiate(listaPersonagens[3].gameObject, pPos[0].transform.position, pPos[0].transform.rotation);
-			break;
+	void MudaPersonagem (int i) {
+		Destroy(p[i].gameObject);
+		pP[i] = pP[i]-1;
+		p[i] = Instantiate(listaPersonagens[pP[i]].gameObject, pPos[i].transform.position, pPos[i].transform.rotation);
+	}
+
+	void CriaPersonagensLobby () {
+		for(int i = 0; i < 4; i++) {
+			p[i] = Instantiate(listaPersonagens[3].gameObject, pPos[i].transform.position, pPos[i].transform.rotation);
 		}
 	}
 		
