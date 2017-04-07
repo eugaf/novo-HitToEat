@@ -25,7 +25,8 @@ public class Jogador : MonoBehaviour {
 
 	//Pulo
 	public 	bool	  puloPodePular = true;
-	public  float	  puloIntervalo, puloIntervaloInicial = 0.3f, puloForca = 7f;
+	public  float	  puloForca = 7f;
+	private bool		podePular = false;
 
 	//Soco
 	public  float	  socoForca = 500f;
@@ -77,11 +78,6 @@ public class Jogador : MonoBehaviour {
 
 		//Movimento
 		movimentoPode = true;
-
-		//Pulo
-//		puloPulando = false;
-//		puloPodePular = true;
-//		puloIntervalo = false;
 
 		//Laser
 		laserFritando = false;
@@ -167,53 +163,20 @@ public class Jogador : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcaoMovimento), Time.deltaTime * rotacaoVelocidade);
 		}
 
-		//Se estiver no chao
-//		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(-0.25f,-.1f,-0.25f), out hit,Quaternion.identity,1 , 1 >> 0)){
-//			if (hit.transform.gameObject.isStatic  || hit.transform.tag == "Movivel") {
-//				noChao = true;
-//				_animator.ResetTrigger("NoAr");
-//			}
-//		}
-
-		if(!puloPodePular) {
-			puloIntervalo -= Time.deltaTime;
-		} else {
-			puloIntervalo = puloIntervaloInicial;
+		if(Input.GetAxisRaw(axisJogadorPulo) != 0 && noChao && !laserFritando){
+			if(!podePular) {
+				podePular = true;
+				puloPodePular = false;
+				_animator.SetBool("Pular", true);
+				_rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
+				_animator.SetTrigger("NoAr");
+				audio.PlayOneShot(pulo);
+			}
 		}
 
-		if(Input.GetAxisRaw(axisJogadorPulo) > 0 && noChao && !laserFritando){
-			puloPodePular = false;
-			_animator.SetBool("Pular", true);
-			_rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
-			_animator.SetTrigger("NoAr");
-			audio.PlayOneShot(pulo);
-//			Debug.Log("Pular!");
+		if(Input.GetAxisRaw(axisJogadorPulo) == 0) {
+			podePular = false;
 		}
-
-			//Se posso pular
-//			if (Input.GetAxisRaw(axisJogadorPulo) > 0 && noChao && !_animator.GetCurrentAnimatorStateInfo(0).IsName("Dash") && !_animator.GetBool("Pular") && !puloIntervalo && puloPodePular) {
-//				//Adiciona a forca para cima com o modo impulso, dando mais realismo ao pulo
-//				noChao = false;
-//				_rigidbody.AddForce (Vector3.up * puloForca, ForceMode.Force);
-//				_animator.SetBool("Pular",true);
-//				StartCoroutine(PularIntervalo());
-//			}
-//		} else { //Se estou no ar
-//			_animator.SetTrigger("NoAr");
-//			_animator.SetBool("Pular",false);
-//			noChao = false;
-//		}
-		//Detectar se ha um player em cima
-//		if (Physics.BoxCast(new Vector3(transform.localPosition.x, transform.position.y + 0.1f, transform.localPosition.z), Vector3.zero, new Vector3(0.25f,5,0.25f), out hit,Quaternion.identity,2f)){
-//			//Se o jogador esta em cima de um jogador, pular e fazer o outro se abaixar
-//			//Debug.Log(hit.collider);
-//			if (hit.transform.tag == "Player" && !_animator.GetBool("LevandoPisada") && hit.transform.gameObject != this.gameObject && hit.collider is CapsuleCollider) {
-//				StartCoroutine(LevouPisada());
-//				_animator.SetBool("LevandoPisada", true);
-//				hit.rigidbody.AddRelativeForce (Vector3.up * puloForca, ForceMode.Impulse);
-//				hit.rigidbody.AddRelativeForce (Vector3.forward * puloForca, ForceMode.Impulse);
-//			}
-//		}
 
 		//Verificar se o jogador esta dando o dash
 		if (rolamentoTravar) {
@@ -254,9 +217,15 @@ public class Jogador : MonoBehaviour {
 	void JogadorRespawn(Vector3 spawnPosicao) {
 		singleton.transform.position = spawnPosicao;
 	}
-
+		
 	//Triggers
 	void OnTriggerStay (Collider col) {
+//		if(chaoCollider.tag == "Player" || chaoCollider.tag == "Movivel") {
+//			noChao = true;
+//			_animator.ResetTrigger("NoAr");
+//			puloPodePular = true;
+//		}
+
 		if (col.gameObject.isStatic == false) {
 			if (!col.isTrigger) {
 				//Verificar se acertou um jogador ou um objeto movivel e esta socando
@@ -291,7 +260,6 @@ public class Jogador : MonoBehaviour {
 		if (other.transform.tag == "Movivel" && rolamentoTravar && other.transform.GetComponent<ParapeitoQuebrarSoco>() != null) {
 			other.transform.GetComponent<ParapeitoQuebrarSoco>().ParapeitoDestruir();
 		}
-
 		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
 			noChao = true;
 			_animator.ResetTrigger("NoAr");
@@ -302,7 +270,6 @@ public class Jogador : MonoBehaviour {
 	void OnCollisionExit (Collision other) {
 		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
 			noChao = false;
-		//	_animator.SetBool("Pular",false);
 		}
 	}
 
@@ -352,24 +319,6 @@ public class Jogador : MonoBehaviour {
 			yield return null;
 		}
 	}
-	/// <summary>
-	/// Intervalo de pulo para o jogador nao ficar flutuando
-	/// </summary>
-	/// <returns>The intervalo.</returns>
-//	private IEnumerator PularIntervalo() {
-//		if (!puloIntervalo) {
-//			yield return new WaitForSeconds (1);
-//			do {
-//				puloIntervalo = true;
-//				puloPodePular = false;
-//				yield return new WaitForSeconds(1 * Time.deltaTime);
-//			} while (!_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") && Input.GetAxisRaw(axisJogadorPulo) != 0);
-//
-//			yield return new WaitForSeconds(puloPularIntervalo);
-//			puloIntervalo = false;
-//			puloPodePular = true;
-//		}
-//	}
 
 	/// <summary>
 	/// Reduz a velocidade do jogador ao levar uma pisada na cabeca

@@ -1,0 +1,2860 @@
+fileFormatVersion: 2
+guid: 77e7ccfc7c020408a8cd93809b04f148
+timeCreated: 1475074323
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Armature
+    100002: BackFoot_L
+    100004: BackFoot_L_end
+    100006: BackFoot_R
+    100008: BackFoot_R_end
+    100010: Belly
+    100012: Bone_01
+    100014: Bone_02
+    100016: Bone_02_end
+    100018: Chest
+    100020: Crista_01_01
+    100022: Crista_01_02
+    100024: Crista_01_03
+    100026: Crista_01_03_end
+    100028: Crista_02_01
+    100030: Crista_02_02
+    100032: Crista_02_03
+    100034: Crista_02_03_end
+    100036: Crista_03_01
+    100038: Crista_03_02
+    100040: Crista_03_03
+    100042: Crista_03_03_end
+    100044: Crista_04_01
+    100046: Crista_04_02
+    100048: Crista_04_03
+    100050: Crista_04_03_end
+    100052: Crista_05_01
+    100054: Crista_05_02
+    100056: Crista_05_03
+    100058: Crista_05_03_end
+    100060: Foot_L
+    100062: Foot_R
+    100064: FootTips_L
+    100066: FootTips_L_end
+    100068: FootTips_R
+    100070: FootTips_R_end
+    100072: FootTracker_L
+    100074: FootTracker_L_end
+    100076: FootTracker_R
+    100078: FootTracker_R_end
+    100080: //RootNode
+    100082: HandTracker_L
+    100084: HandTracker_L_end
+    100086: HandTracker_R
+    100088: HandTracker_R_end
+    100090: Head
+    100092: Hip_L
+    100094: Hip_R
+    100096: Homem Galinha
+    100098: LowerArm_L
+    100100: LowerArm_R
+    100102: LowerFinger_l
+    100104: LowerFinger_l_end
+    100106: LowerFingers_R
+    100108: LowerFingers_R_end
+    100110: LowerLeg_L
+    100112: LowerLeg_R
+    100114: LowerThumb_R
+    100116: LowerThumb_R_end
+    100118: LowerUpper_L
+    100120: LowerUpper_L_end
+    100122: MiddleFinger_L
+    100124: MIddleFingers_R
+    100126: MiddleThumb_L
+    100128: MIddleThumb_R
+    100130: Neck
+    100132: Queixo_01
+    100134: Queixo_02
+    100136: Queixo_02_end
+    100138: Root
+    100140: Shoulder_L
+    100142: Shoulder_R
+    100144: UpperArm_L
+    100146: UpperArm_R
+    100148: UpperFingers_L
+    100150: UpperFingers_R
+    100152: UpperLeg_L
+    100154: UpperLeg_R
+    100156: UpperThumb_L
+    100158: UpperThumb_R
+    400000: Armature
+    400002: BackFoot_L
+    400004: BackFoot_L_end
+    400006: BackFoot_R
+    400008: BackFoot_R_end
+    400010: Belly
+    400012: Bone_01
+    400014: Bone_02
+    400016: Bone_02_end
+    400018: Chest
+    400020: Crista_01_01
+    400022: Crista_01_02
+    400024: Crista_01_03
+    400026: Crista_01_03_end
+    400028: Crista_02_01
+    400030: Crista_02_02
+    400032: Crista_02_03
+    400034: Crista_02_03_end
+    400036: Crista_03_01
+    400038: Crista_03_02
+    400040: Crista_03_03
+    400042: Crista_03_03_end
+    400044: Crista_04_01
+    400046: Crista_04_02
+    400048: Crista_04_03
+    400050: Crista_04_03_end
+    400052: Crista_05_01
+    400054: Crista_05_02
+    400056: Crista_05_03
+    400058: Crista_05_03_end
+    400060: Foot_L
+    400062: Foot_R
+    400064: FootTips_L
+    400066: FootTips_L_end
+    400068: FootTips_R
+    400070: FootTips_R_end
+    400072: FootTracker_L
+    400074: FootTracker_L_end
+    400076: FootTracker_R
+    400078: FootTracker_R_end
+    400080: //RootNode
+    400082: HandTracker_L
+    400084: HandTracker_L_end
+    400086: HandTracker_R
+    400088: HandTracker_R_end
+    400090: Head
+    400092: Hip_L
+    400094: Hip_R
+    400096: Homem Galinha
+    400098: LowerArm_L
+    400100: LowerArm_R
+    400102: LowerFinger_l
+    400104: LowerFinger_l_end
+    400106: LowerFingers_R
+    400108: LowerFingers_R_end
+    400110: LowerLeg_L
+    400112: LowerLeg_R
+    400114: LowerThumb_R
+    400116: LowerThumb_R_end
+    400118: LowerUpper_L
+    400120: LowerUpper_L_end
+    400122: MiddleFinger_L
+    400124: MIddleFingers_R
+    400126: MiddleThumb_L
+    400128: MIddleThumb_R
+    400130: Neck
+    400132: Queixo_01
+    400134: Queixo_02
+    400136: Queixo_02_end
+    400138: Root
+    400140: Shoulder_L
+    400142: Shoulder_R
+    400144: UpperArm_L
+    400146: UpperArm_R
+    400148: UpperFingers_L
+    400150: UpperFingers_R
+    400152: UpperLeg_L
+    400154: UpperLeg_R
+    400156: UpperThumb_L
+    400158: UpperThumb_R
+    4300000: Homem Galinha
+    7400000: Idle_Lobby
+    7400002: Armature|Armature.001|Armature|Carregando Soco|Armature|Carregando Soco
+    7400004: Armature|Armature.001|Armature|Correndo|Armature|Correndo
+    7400006: Armature|Armature.001|Armature|Dash|Armature|Dash
+    7400008: Armature|Armature.001|Armature|Fritando no fogo|Armature|Fritando no
+      fog
+    7400010: Armature|Armature.001|Armature|Fritando No Laser|Armature|Fritando No
+      La
+    7400012: Armature|Armature.001|Armature|Idle|Armature|Idle
+    7400014: Armature|Armature.001|Armature|Levando Pisada|Armature|Levando Pisada
+    7400016: Armature|Armature.001|Armature|Levando Soco|Armature|Levando Soco
+    7400018: Armature|Armature.001|Armature|Levantar|Armature|Levantar
+    7400020: Armature|Armature.001|Armature|Pulando|Armature|Pulando
+    7400022: Armature|Armature.001|Armature|Socando_Forte|Armature|Socando_Forte
+    7400024: Armature|Armature.001|Armature|Socando_Fraco|Armature|Socando_Fraco
+    7400026: Caindo
+    7400028: Carregando Soco
+    7400030: Correndo
+    7400032: Dash
+    7400034: Fritando no fogo
+    7400036: Fritando No Laser
+    7400038: Idle
+    7400040: Levando Pisada
+    7400042: Levando Soco
+    7400044: Levantar
+    7400046: Pulando
+    7400048: Socando_Forte
+    7400050: Socando_Fraco
+    9500000: //RootNode
+    13700000: Homem Galinha
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Caindo
+      takeName: Armature|Caindo
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Carregando Soco
+      takeName: Armature|Carregando Soco
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Correndo
+      takeName: Armature|Correndo
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Dash
+      takeName: Armature|Dash
+      firstFrame: 0
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fritando no fogo
+      takeName: Armature|Fritando no fogo
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Fritando No Laser
+      takeName: Armature|Fritando No Laser
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Armature|Idle
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Levando Pisada
+      takeName: Armature|Levando Pisada
+      firstFrame: 0
+      lastFrame: 14
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Levando Soco
+      takeName: Armature|Levando Soco
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Levantar
+      takeName: Armature|Levantar
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Pulando
+      takeName: Armature|Pulando
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Socando_Forte
+      takeName: Armature|Socando_Forte
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Socando_Fraco
+      takeName: Armature|Socando_Fraco
+      firstFrame: 0
+      lastFrame: 10
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle_Lobby
+      takeName: Armature|Idle_Lobby
+      firstFrame: 0
+      lastFrame: 149
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/FootTracker_L
+        weight: 1
+      - path: Armature/FootTracker_L/FootTracker_L_end
+        weight: 1
+      - path: Armature/FootTracker_R
+        weight: 1
+      - path: Armature/FootTracker_R/FootTracker_R_end
+        weight: 1
+      - path: Armature/HandTracker_L
+        weight: 1
+      - path: Armature/HandTracker_L/HandTracker_L_end
+        weight: 1
+      - path: Armature/HandTracker_R
+        weight: 1
+      - path: Armature/HandTracker_R/HandTracker_R_end
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Belly/Chest
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Bone_01/Bone_02/Bone_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_01_01/Crista_01_02/Crista_01_03/Crista_01_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_02_01/Crista_02_02/Crista_02_03/Crista_02_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_03_01/Crista_03_02/Crista_03_03/Crista_03_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_04_01/Crista_04_02/Crista_04_03/Crista_04_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Crista_05_01/Crista_05_02/Crista_05_03/Crista_05_03_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Neck/Head/Queixo_01/Queixo_02/Queixo_02_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperFingers_L/MiddleFinger_L/LowerFinger_l/LowerFinger_l_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_L/UpperArm_L/LowerArm_L/UpperThumb_L/MiddleThumb_L/LowerUpper_L/LowerUpper_L_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperFingers_R/MIddleFingers_R/LowerFingers_R/LowerFingers_R_end
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R
+        weight: 1
+      - path: Armature/Root/Belly/Chest/Shoulder_R/UpperArm_R/LowerArm_R/UpperThumb_R/MIddleThumb_R/LowerThumb_R/LowerThumb_R_end
+        weight: 1
+      - path: Armature/Root/Hip_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/BackFoot_L/BackFoot_L_end
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L
+        weight: 1
+      - path: Armature/Root/Hip_L/UpperLeg_L/LowerLeg_L/Foot_L/FootTips_L/FootTips_L_end
+        weight: 1
+      - path: Armature/Root/Hip_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/BackFoot_R/BackFoot_R_end
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R
+        weight: 1
+      - path: Armature/Root/Hip_R/UpperLeg_R/LowerLeg_R/Foot_R/FootTips_R/FootTips_R_end
+        weight: 1
+      - path: Homem Galinha
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
