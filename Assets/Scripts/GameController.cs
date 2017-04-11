@@ -10,13 +10,6 @@ public class GameController : MonoBehaviour {
 
 //	public static GameController singleton;
 
-	public GameObject[] pPos, p;
-	public GameObject[] listaPersonagens;
-	public Material[]			 baseMaterials;
-	public SkinnedMeshRenderer[] jogadoresMaterials;
-	public int[] 		pP;
-	public float timer = 0;
-
     //LASERS
 	public GameObject[] lasersLista;
 	public float 	laserEsperaDisparo, laserTempo;
@@ -52,25 +45,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	void Start () {
-
-
 		if(Application.loadedLevelName != "Lobby" || Application.loadedLevelName != "Menu") {
 			ChecarCena();
 		}
-
-		CriaPersonagensLobby();
-
-		for(int i = 0 ; i < 4; i++) {
-			jogadoresMaterials[i] = p[i].GetComponentInChildren<SkinnedMeshRenderer>();
-			jogadoresMaterials [i].material = baseMaterials[i];
-		}
     }
-
-	void FixedUpdate() {
-		if(timer < 3) {
-		timer += Time.deltaTime;
-		}
-	}
 
 	void Update() {
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
@@ -89,17 +67,6 @@ public class GameController : MonoBehaviour {
 //			Invoke("Start", .5f);
 		}
 
-		if(Input.GetKeyDown(KeyCode.LeftArrow)) {
-			MudaPersonagem(0);
-		}
-
-		if(timer < 2.8f) {
-			for(int i = 0; i < 4; i++) {
-				p[i].transform.position = pPos[i].transform.position;
-			}
-		}
-
-
 //		for(int i = 0; i < jogadoresLista.Count; i++) {
 //			Jogador jogadorScript = jogadoresLista[i].GetComponent<Jogador>();
 //			Text[] vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
@@ -114,18 +81,6 @@ public class GameController : MonoBehaviour {
 //			}
 //		}
 
-	}
-
-	void MudaPersonagem (int i) {
-		Destroy(p[i].gameObject);
-		pP[i] = pP[i]-1;
-		p[i] = Instantiate(listaPersonagens[pP[i]].gameObject, pPos[i].transform.position, pPos[i].transform.rotation);
-	}
-
-	void CriaPersonagensLobby () {
-		for(int i = 0; i < 4; i++) {
-			p[i] = Instantiate(listaPersonagens[3].gameObject, pPos[i].transform.position, pPos[i].transform.rotation);
-		}
 	}
 		
 	public void TrocaCena() {
@@ -145,7 +100,6 @@ public class GameController : MonoBehaviour {
         ChecarJogadores();
 		if (SceneManager.GetActiveScene().name == "Cozinha" || SceneManager.GetActiveScene().name == "Banheiro" || SceneManager.GetActiveScene().name == "Quadra" || SceneManager.GetActiveScene().name == "Arena") {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
-            //StartCoroutine(CriarNovoPowerUp());
 			StartCoroutine(LaserLigar());
         }
     }
