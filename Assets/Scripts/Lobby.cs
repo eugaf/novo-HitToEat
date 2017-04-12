@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,18 +8,22 @@ public class Lobby : MonoBehaviour {
 	public GameObject 				pPos, p, startButton, cancelButton, colorButton;
 	public GameObject[]				listaPersonagens, listaPaletas;
 	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials;
-	public SkinnedMeshRenderer[]	personagemMaterial;
-	public int 						nListaPersonagens = 3, nMaterial, status;
+	public SkinnedMeshRenderer		personagemMaterial;
+	public int 						nListaPersonagens = 3, nMaterial, status, nPlayer;
 	public string					horizontal, a, b;
 
 	private float timer = 0, timerCall = .2f;
-	private bool once = false;
+	private bool once = false, cont = false;
+
+	GameController gcScript;
 
 
 	//Status 0 = Sem seleção; Status 1 = Seleciona personagem; Status 2 = Seleciona paleta
 
 	// Use this for initialization
 	void Start () {
+		gcScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+
 		status = 0;
 		CriaPersonagemLobby();
 //		for(int i = 0 ; i < 4; i++) {
@@ -28,14 +33,25 @@ public class Lobby : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if(Input.GetAxisRaw(a) > 0.1f && !once && status < 2) {
+		if(Input.GetAxisRaw(a) > 0.1f && !once && status < 3) {
 			once = true;
 			status++;
+			if(status >= 1 && !cont) {
+				gcScript.nJogadores += 1;
+				cont = true;
+			}
+			if(status == 3) {
+				StartLevel();
+			}
 		}
 
 		if(Input.GetAxisRaw(b) > 0.1f && !once && status > 0) {
 			once = true;
 			status--;
+			if(status == 0 && cont) {
+				gcScript.nJogadores -= 1;
+				cont = false;
+			}
 		}
 
 		switch (status) {
@@ -50,6 +66,7 @@ public class Lobby : MonoBehaviour {
 			colorButton.SetActive(true);
 			break;
 		case 2:
+			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
 			startButton.SetActive(true);
 			cancelButton.SetActive(true);
 			colorButton.SetActive(false);
@@ -57,6 +74,38 @@ public class Lobby : MonoBehaviour {
 		}
 
 		CdInicial ();
+		MudarSelecao();
+		Once();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	}
+
+	void StartLevel() {
+		int level = Random.Range(0,3);
+
+		switch(level) {
+		case 0:
+			SceneManager.LoadScene(2);
+			gcScript.PreCena();
+			break;
+		case 1:
+			SceneManager.LoadScene(3);
+			gcScript.PreCena();
+			break;
+		case 2:
+			SceneManager.LoadScene(4);
+			gcScript.PreCena();
+			break;
+		case 3:
+			SceneManager.LoadScene(5);
+			gcScript.PreCena();
+			break;
+		}
+	}
+
+	void MudarSelecao () {
 		if(status > 0) {
 			if(Input.GetAxisRaw(horizontal) < -0.1f && !once && timer > 2.8f) {
 				once = true;
@@ -76,16 +125,9 @@ public class Lobby : MonoBehaviour {
 				}
 			}
 		}
-
-		Once();
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	}
 
 	void Once () {
-
 		if(once) {
 			timerCall -= Time.deltaTime;
 		}
@@ -103,6 +145,7 @@ public class Lobby : MonoBehaviour {
 			nListaPersonagens = 5;
 		}
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
+		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
 		EscolhePaleta(nListaPersonagens);
 	}
 
@@ -113,28 +156,64 @@ public class Lobby : MonoBehaviour {
 			nListaPersonagens = 0;
 		}
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
+		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
 		EscolhePaleta(nListaPersonagens);
 	}
 
 	void MudaPaletaEsquerda (int i) {
+		nMaterial -= 1;
+
+		if(nMaterial < 0) {
+			nMaterial = 3;
+		} 
+
 		switch(i) {
 		case 0:
+			personagemMaterial.material = alienMaterials[nMaterial];
 			break;
 		case 1:
+			personagemMaterial.material = astronautaMaterials[nMaterial];
 			break;
 		case 2:
+			personagemMaterial.material = galinhaMaterials[nMaterial];
 			break;
 		case 3:
 			break;
 		case 4:
+			personagemMaterial.material = pedroMaterials[nMaterial];
 			break;
 		case 5:
+			personagemMaterial.material = zumbiMaterials[nMaterial];
 			break;
 		}
 	}
 
 	void MudaPaletaDireita (int i) {
+		nMaterial += 1;
 
+		if(nMaterial > 3) {
+			nMaterial = 0;
+		} 
+
+		switch(i) {
+		case 0:
+			personagemMaterial.material = alienMaterials[nMaterial];
+			break;
+		case 1:
+			personagemMaterial.material = astronautaMaterials[nMaterial];
+			break;
+		case 2:
+			personagemMaterial.material = galinhaMaterials[nMaterial];
+			break;
+		case 3:
+			break;
+		case 4:
+			personagemMaterial.material = pedroMaterials[nMaterial];
+			break;
+		case 5:
+			personagemMaterial.material = zumbiMaterials[nMaterial];
+			break;
+		}
 	}
 
 	void EscolhePaleta(int i) {
@@ -149,6 +228,7 @@ public class Lobby : MonoBehaviour {
 
 	void CriaPersonagemLobby () {
 		p = Instantiate(listaPersonagens[3].gameObject, pPos.transform.position, pPos.transform.rotation);
+		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
 	}
 
 	void CdInicial () {

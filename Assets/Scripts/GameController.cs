@@ -16,8 +16,10 @@ public class GameController : MonoBehaviour {
 	public bool  	laserPodeLigar;
 
     //JOGADORES
-	public GameObject[] HUDVidas;
-    public List<GameObject> jogadoresLista;
+	public GameObject[] 			HUDVidas, jogadoresPrefab;
+    public List<GameObject>			jogadoresLista;
+	public SkinnedMeshRenderer[]	personagemMaterial;
+	public int						nJogadores;
 
     //INPUTS
     public List<string> inputsPlayer1;
@@ -26,8 +28,12 @@ public class GameController : MonoBehaviour {
 	public List<string> inputsPlayer4;
 	public List<List<string>> Jogadores_INPUTS;
 
+	public GameObject[] respawns;
+
     //CONFIRMAR
     bool podeLigar;
+
+	string name;
 
 	void Awake () {
 		//Gerenciamento da instancia do GameController
@@ -38,35 +44,17 @@ public class GameController : MonoBehaviour {
 //			Destroy (gameObject);
 //		}
 		DontDestroyOnLoad(this);
-
-//		if(cenaAtual.name != "Fim") {
-//			Debug.Log("Cena ativa: " + cenaAtual.name);
-		//		}
 	}
 
 	void Start () {
-		if(Application.loadedLevelName != "Lobby" || Application.loadedLevelName != "Menu") {
-			ChecarCena();
-		}
+		name = SceneManager.GetActiveScene().name;
+//		
+//		if(name != "Lobby" && name != "Menu") {
+//			ChecarCena();
+//		}
     }
 
 	void Update() {
-		if(Input.GetKeyDown(KeyCode.Alpha1)) {
-//			Invoke("Start", .5f);
-			SceneManager.LoadScene(0);
-			Start();
-		} else if(Input.GetKeyDown(KeyCode.Alpha2)) {
-			SceneManager.LoadScene(1);
-			ChecarCena();
-//			Invoke("Start", .5f);
-		} else if(Input.GetKeyDown(KeyCode.Alpha3)) {
-			SceneManager.LoadScene(2);
-//			Invoke("Start", .5f);
-		} else if(Input.GetKeyDown(KeyCode.Alpha4)) {
-			SceneManager.LoadScene(3);
-//			Invoke("Start", .5f);
-		}
-
 //		for(int i = 0; i < jogadoresLista.Count; i++) {
 //			Jogador jogadorScript = jogadoresLista[i].GetComponent<Jogador>();
 //			Text[] vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
@@ -83,36 +71,47 @@ public class GameController : MonoBehaviour {
 
 	}
 		
-	public void TrocaCena() {
-		SceneManager.LoadScene(1);
-        Invoke("ChecarCena", 3);
-   }
+//	public void TrocaCena() {
+//		SceneManager.LoadScene(1);
+//        Invoke("ChecarCena", 3);
+//   }
 
-    public void ReiniciarJogo() {
-        SceneManager.LoadScene(0);
-        Destroy(gameObject);
-    }
+//    public void ReiniciarJogo() {
+//        SceneManager.LoadScene(0);
+//        Destroy(gameObject);
+//    }
+	public void PreCena () {
+		Invoke("ChecarCena", .1f);
+	}
 
 
-
-    public void ChecarCena() {
-        //Debug.Log("CHECK");
-        ChecarJogadores();
-		if (SceneManager.GetActiveScene().name == "Cozinha" || SceneManager.GetActiveScene().name == "Banheiro" || SceneManager.GetActiveScene().name == "Quadra" || SceneManager.GetActiveScene().name == "Arena") {
+	public void ChecarCena() {
+		string name = SceneManager.GetActiveScene().name;
+//        ChecarJogadores();
+		CriaPersonagens();
+		if (name == "Cozinha" || name == "Banheiro" || name == "Quadra" || name == "Arena") {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
 			StartCoroutine(LaserLigar());
         }
     }
 
+	void CriaPersonagens() {
+		respawns = GameObject.FindGameObjectsWithTag("Respawn");
+		GameObject local = respawns[Random.Range(0, respawns.Length)];
+		Debug.Log(respawns.Length);
+		jogadoresPrefab[0].tag = "Player";
+		Instantiate (jogadoresPrefab[0].gameObject, local.transform.position, local.transform.rotation);
+	}
+
     public void ChecarJogadores() {
-        jogadoresLista.Clear();
-        jogadoresLista.AddRange(GameObject.FindGameObjectsWithTag("Player"));
-        //Deixar em ordem alfabetica a lista de jogadores
-        jogadoresLista.Sort(
-            delegate (GameObject Jogador1, GameObject Jogador2) {
-                return Jogador1.name.CompareTo(Jogador2.name);
-            }
-        );
+//        jogadoresLista.Clear();
+//        jogadoresLista.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+//        //Deixar em ordem alfabetica a lista de jogadores
+//        jogadoresLista.Sort(
+//            delegate (GameObject Jogador1, GameObject Jogador2) {
+//                return Jogador1.name.CompareTo(Jogador2.name);
+//            }
+//        );
 	//	HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
 
 //		for(int i = jogadoresLista.Count; i < HUDVidas.Length; i++) {
@@ -122,7 +121,9 @@ public class GameController : MonoBehaviour {
 
 	//COROUTINES
 	public IEnumerator LaserLigar() {
-		if (SceneManager.GetActiveScene().name == "Cozinha" || SceneManager.GetActiveScene().name == "Banheiro" || SceneManager.GetActiveScene().name == "Quadra" || SceneManager.GetActiveScene().name == "Arena") {
+		string name = SceneManager.GetActiveScene().name;
+
+		if (name == "Cozinha" || name == "Banheiro" || name == "Quadra" || name == "Arena") {
             yield return new WaitForSeconds(laserEsperaDisparo);
             int i = Random.Range(0, lasersLista.Length);
 			if (!lasersLista[i].GetComponent<Laser>().Linha.enabled) {
