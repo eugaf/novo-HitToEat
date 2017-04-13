@@ -7,25 +7,58 @@ public class Lobby : MonoBehaviour {
 
 	public GameObject 				pPos, p, startButton, cancelButton, colorButton;
 	public GameObject[]				listaPersonagens, listaPaletas;
-	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials;
+	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials, baseMaterials;
 	public SkinnedMeshRenderer		personagemMaterial;
 	public int 						nListaPersonagens = 3, nMaterial, status, nPlayer;
 	public string					horizontal, a, b;
 
-	private float timer = 0, timerCall = .2f;
-	private bool once = false, cont = false;
+	private float 	timer = 0, timerCall = .2f;
+	private bool 	once = false, cont = false;
 
 	GameController gcScript;
 
 
 	//Status 0 = Sem seleção; Status 1 = Seleciona personagem; Status 2 = Seleciona paleta
 
+	void Awake () {
+
+		for(int i = 0; i < listaPersonagens.Length; i++) {
+			listaPersonagens[i].transform.localScale = new Vector3(.59f, .59f, .59f);
+			Jogador jogadorScript = listaPersonagens[i].GetComponent<Jogador>();
+			jogadorScript.enabled = false;
+			Rigidbody rb = listaPersonagens[i].GetComponent<Rigidbody>();
+			rb.useGravity = false;
+			CapsuleCollider caps = listaPersonagens[i].GetComponent<CapsuleCollider>();
+			caps.enabled = false;
+			SkinnedMeshRenderer smr = listaPersonagens[i].GetComponentInChildren<SkinnedMeshRenderer>();
+			switch(i) {
+			case 0:
+				smr.material = alienMaterials[nMaterial];
+				break;
+			case 1:
+				smr.material = astronautaMaterials[nMaterial];
+				break;
+			case 2:
+				smr.material = galinhaMaterials[nMaterial];
+				break;
+			case 3:
+				smr.material = baseMaterials[nMaterial];
+				break;
+			case 4:
+				smr.material = pedroMaterials[nMaterial];
+				break;
+			case 5:
+				smr.material = zumbiMaterials[nMaterial];
+				break;
+			}
+		}
+	}
+
 	// Use this for initialization
 	void Start () {
 		gcScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
-
-		status = 0;
 		CriaPersonagemLobby();
+		status = 0;
 //		for(int i = 0 ; i < 4; i++) {
 //			jogadoresMaterials[i] = p.GetComponentInChildren<SkinnedMeshRenderer>();
 //			jogadoresMaterials [i].material = baseMaterials[i];
@@ -61,6 +94,7 @@ public class Lobby : MonoBehaviour {
 			colorButton.SetActive(false);
 			break;
 		case 1:
+			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
 			startButton.SetActive(false);
 			cancelButton.SetActive(true);
 			colorButton.SetActive(true);
@@ -80,29 +114,36 @@ public class Lobby : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+//		if(nListaPersonagens == 3) {
+//			SkinnedMeshRenderer smr = p.GetComponentInChildren<SkinnedMeshRenderer>();
+//			smr.material = baseMaterials[0];
+//			gcScript.personagensMaterial[nPlayer] = smr.material;
+//		}
 	}
 
 	void StartLevel() {
-		int level = Random.Range(0,3);
-
-		switch(level) {
-		case 0:
-			SceneManager.LoadScene(2);
-			gcScript.PreCena();
-			break;
-		case 1:
-			SceneManager.LoadScene(3);
-			gcScript.PreCena();
-			break;
-		case 2:
-			SceneManager.LoadScene(4);
-			gcScript.PreCena();
-			break;
-		case 3:
-			SceneManager.LoadScene(5);
-			gcScript.PreCena();
-			break;
-		}
+		SceneManager.LoadScene(4);
+		gcScript.PreCena();
+//		int level = Random.Range(0,3);
+//
+//		switch(level) {
+//		case 0:
+//			SceneManager.LoadScene(2);
+//			gcScript.PreCena();
+//			break;
+//		case 1:
+//			SceneManager.LoadScene(3);
+//			gcScript.PreCena();
+//			break;
+//		case 2:
+//			SceneManager.LoadScene(4);
+//			gcScript.PreCena();
+//			break;
+//		case 3:
+//			SceneManager.LoadScene(5);
+//			gcScript.PreCena();
+//			break;
+//		}
 	}
 
 	void MudarSelecao () {
@@ -146,6 +187,7 @@ public class Lobby : MonoBehaviour {
 		}
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
 		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
+		ArrumaPaleta(nListaPersonagens);
 		EscolhePaleta(nListaPersonagens);
 	}
 
@@ -155,9 +197,43 @@ public class Lobby : MonoBehaviour {
 		if(nListaPersonagens > 5) {
 			nListaPersonagens = 0;
 		}
+
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
 		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
+		ArrumaPaleta(nListaPersonagens);
 		EscolhePaleta(nListaPersonagens);
+	}
+
+	void ArrumaPaleta (int i) {
+		personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
+
+		switch(i) {
+		case 0:
+			personagemMaterial.material = alienMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		case 1:
+			personagemMaterial.material = astronautaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		case 2:
+			personagemMaterial.material = galinhaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		case 3:
+			personagemMaterial.material = baseMaterials[0];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		case 4:
+			personagemMaterial.material = pedroMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		case 5:
+			personagemMaterial.material = zumbiMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
+			break;
+		}
+
 	}
 
 	void MudaPaletaEsquerda (int i) {
@@ -170,20 +246,27 @@ public class Lobby : MonoBehaviour {
 		switch(i) {
 		case 0:
 			personagemMaterial.material = alienMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 1:
 			personagemMaterial.material = astronautaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 2:
 			personagemMaterial.material = galinhaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 3:
+			personagemMaterial.material = baseMaterials[0];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 4:
 			personagemMaterial.material = pedroMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 5:
 			personagemMaterial.material = zumbiMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		}
 	}
@@ -198,20 +281,27 @@ public class Lobby : MonoBehaviour {
 		switch(i) {
 		case 0:
 			personagemMaterial.material = alienMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 1:
 			personagemMaterial.material = astronautaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 2:
 			personagemMaterial.material = galinhaMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 3:
+			personagemMaterial.material = baseMaterials[0];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 4:
 			personagemMaterial.material = pedroMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 5:
 			personagemMaterial.material = zumbiMaterials[nMaterial];
+			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		}
 	}
@@ -228,6 +318,9 @@ public class Lobby : MonoBehaviour {
 
 	void CriaPersonagemLobby () {
 		p = Instantiate(listaPersonagens[3].gameObject, pPos.transform.position, pPos.transform.rotation);
+		SkinnedMeshRenderer skr = p.GetComponentInChildren<SkinnedMeshRenderer>();
+		skr.material = baseMaterials[0];
+		ArrumaPaleta(3);
 		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
 	}
 

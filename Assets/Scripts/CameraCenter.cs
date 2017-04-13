@@ -13,12 +13,17 @@ public class CameraCenter : MonoBehaviour {
 	private Vector3 novaPosicao;
 
 	void Start () {
-		playerLista = GameObject.FindGameObjectsWithTag("Player");
 	}
 
 	void FixedUpdate() {
-		Mover();
-		Zoom();
+		if(playerLista.Length != 0) {
+			Mover();
+			Zoom();
+		}
+	}
+
+	public void AchaJogadores () {
+		playerLista = GameObject.FindGameObjectsWithTag("Player");
 	}
 
 	void Mover() {

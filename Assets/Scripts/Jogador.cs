@@ -57,6 +57,8 @@ public class Jogador : MonoBehaviour {
 	public  JogadorLevantandoStateMachine jogadorLevantandoAnimacao;
 	public  JogadorDashStateMachine jogadorDashAnimacao;
 
+	public Transform target;
+
 	//Audio
 	AudioSource 		audio;
 	public AudioClip 	pulo;
@@ -193,6 +195,14 @@ public class Jogador : MonoBehaviour {
 
         //Movimentar o personagem na direcaoMovimento apertada
 		transform.Translate(direcaoMovimento, Space.World);
+	}
+
+	void Update () {
+		if(Physics.Linecast(transform.position, target.position)) {
+			Debug.Log("hitting");
+		} else {
+			Debug.Log("not hitting");
+		}
 	}
 
 	void LateUpdate() {

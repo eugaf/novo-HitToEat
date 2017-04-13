@@ -18,17 +18,22 @@ public class GameController : MonoBehaviour {
     //JOGADORES
 	public GameObject[] 			HUDVidas, jogadoresPrefab;
     public List<GameObject>			jogadoresLista;
-	public SkinnedMeshRenderer[]	personagemMaterial;
+	public SkinnedMeshRenderer[]	personagensSMR;
+	public Material[]				personagensMaterial;
 	public int						nJogadores;
 
     //INPUTS
-    public List<string> inputsPlayer1;
-	public List<string> inputsPlayer2;
-	public List<string> inputsPlayer3;
-	public List<string> inputsPlayer4;
-	public List<List<string>> Jogadores_INPUTS;
+//    public List<string> inputsPlayer1;
+//	public List<string> inputsPlayer2;
+//	public List<string> inputsPlayer3;
+//	public List<string> inputsPlayer4;
+//	public List<List<string>> Jogadores_INPUTS;
+
+	public string[] inputP1, inputP2, inputP3, inputP4;
 
 	public GameObject[] respawns;
+
+	CameraCenter cam;
 
     //CONFIRMAR
     bool podeLigar;
@@ -55,35 +60,12 @@ public class GameController : MonoBehaviour {
     }
 
 	void Update() {
-//		for(int i = 0; i < jogadoresLista.Count; i++) {
-//			Jogador jogadorScript = jogadoresLista[i].GetComponent<Jogador>();
-//			Text[] vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
-//			for(int j =0; j < vidasText.Length; j++) {
-//				if(vidasText[j].tag == "Vidas") {
-//					vidasText[j].text = jogadorScript.vidas.ToString();
-//				}
-//
-//				if(jogadorScript.vidas <= 0) {
-//					Application.LoadLevel(3);
-//				}
-//			}
-//		}
 
 	}
-		
-//	public void TrocaCena() {
-//		SceneManager.LoadScene(1);
-//        Invoke("ChecarCena", 3);
-//   }
 
-//    public void ReiniciarJogo() {
-//        SceneManager.LoadScene(0);
-//        Destroy(gameObject);
-//    }
 	public void PreCena () {
 		Invoke("ChecarCena", .1f);
 	}
-
 
 	public void ChecarCena() {
 		string name = SceneManager.GetActiveScene().name;
@@ -96,11 +78,86 @@ public class GameController : MonoBehaviour {
     }
 
 	void CriaPersonagens() {
+		cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 		respawns = GameObject.FindGameObjectsWithTag("Respawn");
-		GameObject local = respawns[Random.Range(0, respawns.Length)];
-		Debug.Log(respawns.Length);
-		jogadoresPrefab[0].tag = "Player";
-		Instantiate (jogadoresPrefab[0].gameObject, local.transform.position, local.transform.rotation);
+
+		for(int i = 0; i < nJogadores; i++) {
+			personagensSMR[i] = jogadoresPrefab[i].GetComponentInChildren<SkinnedMeshRenderer>();
+			personagensSMR[i].material = personagensMaterial[i];
+
+			Jogador jogadorScript = jogadoresPrefab[i].GetComponent<Jogador>();
+			jogadorScript.enabled = true;
+			CapsuleCollider caps = jogadoresPrefab[i].GetComponent<CapsuleCollider>();
+			caps.enabled = true;
+			Rigidbody rb = jogadoresPrefab[i].GetComponent<Rigidbody>();
+			rb.useGravity = true;
+
+			switch(i) {
+			case 0:
+				for(int j = 0; j < 5; j++) {
+					jogadorScript.axisJogadorVertical = inputP1[0];
+					jogadorScript.axisJogadorHorizontal = inputP1[1];
+					jogadorScript.axisJogadorPulo = inputP1[2];
+					jogadorScript.axisJogadorSocoBotao = inputP1[3];
+					jogadorScript.axisJogadorRolarBotao = inputP1[4];
+				}
+				break;
+			case 1:
+				for(int j = 0; j < 5; j++) {
+					jogadorScript.axisJogadorVertical = inputP2[0];
+					jogadorScript.axisJogadorHorizontal = inputP2[1];
+					jogadorScript.axisJogadorPulo = inputP2[2];
+					jogadorScript.axisJogadorSocoBotao = inputP2[3];
+					jogadorScript.axisJogadorRolarBotao = inputP2[4];
+				}
+				break;
+			case 2:
+				for(int j = 0; j < 5; j++) {
+					jogadorScript.axisJogadorVertical = inputP3[0];
+					jogadorScript.axisJogadorHorizontal = inputP3[1];
+					jogadorScript.axisJogadorPulo = inputP3[2];
+					jogadorScript.axisJogadorSocoBotao = inputP3[3];
+					jogadorScript.axisJogadorRolarBotao = inputP3[4];
+				}
+				break;
+			case 3:
+				for(int j = 0; j < 5; j++) {
+					jogadorScript.axisJogadorVertical = inputP4[0];
+					jogadorScript.axisJogadorHorizontal = inputP4[1];
+					jogadorScript.axisJogadorPulo = inputP4[2];
+					jogadorScript.axisJogadorSocoBotao = inputP4[3];
+					jogadorScript.axisJogadorRolarBotao = inputP4[4];
+				}
+				break;
+			}
+
+			GameObject local = respawns[Random.Range(0, respawns.Length)];
+			jogadoresPrefab[i].tag = "Player";
+			jogadoresPrefab[i].transform.localScale = new Vector3(.25f, .25f, .25f);
+			Instantiate (jogadoresPrefab[i].gameObject, local.transform.position, local.transform.rotation);
+		}
+
+		cam.AchaJogadores();
+
+//		for(int i = 0; i < nJogadores; i++) {
+//			Jogador jogadorScript = jogadoresPrefab[i].GetComponent<Jogador>();
+//			Text[] vidasText = HUDVidas[i].GetComponentsInChildren<Text>();
+//			for(int j =0; j < vidasText.Length; j++) {
+//				if(vidasText[j].tag == "Vidas") {
+//					vidasText[j].text = jogadorScript.vidas.ToString();
+//				}
+//
+//				if(jogadorScript.vidas <= 0) {
+//					Application.LoadLevel(3);
+//				}
+//			}
+//		}
+
+		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
+
+		for(int i = jogadoresPrefab.Length; i < HUDVidas.Length; i++) {
+			HUDVidas[i].SetActive(false);
+		}
 	}
 
     public void ChecarJogadores() {
@@ -112,11 +169,7 @@ public class GameController : MonoBehaviour {
 //                return Jogador1.name.CompareTo(Jogador2.name);
 //            }
 //        );
-	//	HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
 
-//		for(int i = jogadoresLista.Count; i < HUDVidas.Length; i++) {
-//			HUDVidas[i].SetActive(false);
-//		}
     }
 
 	//COROUTINES
