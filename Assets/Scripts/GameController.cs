@@ -16,11 +16,13 @@ public class GameController : MonoBehaviour {
 	public bool  	laserPodeLigar;
 
     //JOGADORES
-	public GameObject[] 			HUDVidas, jogadoresPrefab;
+	public GameObject[] 			HUDVidas, jogadoresPrefab, p;
+	public GameObject				mensagem;
     public List<GameObject>			jogadoresLista;
 	public SkinnedMeshRenderer[]	personagensSMR;
 	public Material[]				personagensMaterial;
 	public int						nJogadores;
+	public int[]					nPersonagens;
 
     //INPUTS
 //    public List<string> inputsPlayer1;
@@ -35,8 +37,7 @@ public class GameController : MonoBehaviour {
 
 	CameraCenter cam;
 
-    //CONFIRMAR
-    bool podeLigar;
+    bool gameOn = false;
 
 	string name;
 
@@ -59,8 +60,46 @@ public class GameController : MonoBehaviour {
 //		}
     }
 
-	void Update() {
+	void FixedUpdate() {
+//		Invoke("ChecarCena", .1f);
+		if(gameOn) {
+			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
+			cam.AchaJogadores();
+			for(int i = 0; i < nJogadores; i++) {
+				if(p[i] != null) {
+					Jogador jogadorScript = p[i].GetComponent<Jogador>();
+					HUD hudScript = HUDVidas[i].GetComponent<HUD>();
+					Image vidas = hudScript.vidas.GetComponent<Image>();
+					vidas.sprite = hudScript.vidasImg[jogadorScript.vidas];
+				
+					if(jogadorScript.vidas < 1) {
+						Destroy(p[i].gameObject);
+						p[i] = null;
+						nJogadores--;
+					}
+				}
+			}
 
+			if(nJogadores < 2) {
+				for(int i = 0; i < 4; i++) {
+					if(p[i] != null) {
+						Jogador jogadorScript = p[i].GetComponent<Jogador>();
+						mensagem.SetActive(true);
+						int numero = i + 1;
+						Text msg = mensagem.GetComponentInChildren<Text>();
+						msg.text = "Player " + numero + " wins!";
+//						Time.timeScale = 0;
+					}
+				}
+
+				if(Input.anyKey) {
+//					Time.timeScale = 1;
+					SceneManager.LoadScene("Menu");
+				}
+			}
+		}
+
+//		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
 	}
 
 	public void PreCena () {
@@ -80,16 +119,30 @@ public class GameController : MonoBehaviour {
 	void CriaPersonagens() {
 		cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 		respawns = GameObject.FindGameObjectsWithTag("Respawn");
+		mensagem = GameObject.FindGameObjectWithTag("Mensagem");
+		mensagem.SetActive(false);
+
+
+		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
+		for(int i = nJogadores; i < HUDVidas.Length; i++) {
+			HUDVidas[i].SetActive(false);
+		}
 
 		for(int i = 0; i < nJogadores; i++) {
 			personagensSMR[i] = jogadoresPrefab[i].GetComponentInChildren<SkinnedMeshRenderer>();
 			personagensSMR[i].material = personagensMaterial[i];
 
-			Jogador jogadorScript = jogadoresPrefab[i].GetComponent<Jogador>();
+			GameObject local = respawns[Random.Range(0, respawns.Length)];
+			p[i] = Instantiate (jogadoresPrefab[i].gameObject, local.transform.position, local.transform.rotation);
+			p[i].tag = "Player";
+			p[i].transform.localScale = new Vector3(.3f, .3f, .3f);
+
+			Jogador jogadorScript = p[i].GetComponent<Jogador>();
+			jogadorScript.nJogador = i+1;
 			jogadorScript.enabled = true;
-			CapsuleCollider caps = jogadoresPrefab[i].GetComponent<CapsuleCollider>();
+			CapsuleCollider caps = p[i].GetComponent<CapsuleCollider>();
 			caps.enabled = true;
-			Rigidbody rb = jogadoresPrefab[i].GetComponent<Rigidbody>();
+			Rigidbody rb = p[i].GetComponent<Rigidbody>();
 			rb.useGravity = true;
 
 			switch(i) {
@@ -131,10 +184,15 @@ public class GameController : MonoBehaviour {
 				break;
 			}
 
-			GameObject local = respawns[Random.Range(0, respawns.Length)];
-			jogadoresPrefab[i].tag = "Player";
-			jogadoresPrefab[i].transform.localScale = new Vector3(.25f, .25f, .25f);
-			Instantiate (jogadoresPrefab[i].gameObject, local.transform.position, local.transform.rotation);
+//			Jogador jogadorScript = p[i].GetComponent<Jogador>();
+//			HUD hudScript = HUDVidas[i].GetComponent<HUD>();
+//			Image vidas = hudScript.vidas.GetComponent<Image>();
+
+			HUD hudScript = HUDVidas[i].GetComponent<HUD>();
+			Image icone = hudScript.icones.GetComponent<Image>();
+			icone.sprite = hudScript.iconesImg[nPersonagens[i]];
+
+			gameOn = true;
 		}
 
 		cam.AchaJogadores();
@@ -152,12 +210,6 @@ public class GameController : MonoBehaviour {
 //				}
 //			}
 //		}
-
-		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
-
-		for(int i = jogadoresPrefab.Length; i < HUDVidas.Length; i++) {
-			HUDVidas[i].SetActive(false);
-		}
 	}
 
     public void ChecarJogadores() {

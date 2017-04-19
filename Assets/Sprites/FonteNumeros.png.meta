@@ -1,0 +1,692 @@
+fileFormatVersion: 2
+guid: 4c1c2fd449eed4deb8204470df98f245
+timeCreated: 1492518157
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FonteNumeros_0
+    21300002: FonteNumeros_1
+    21300004: FonteNumeros_2
+    21300006: FonteNumeros_3
+    21300008: FonteNumeros_4
+    21300010: FonteNumeros_5
+    21300012: FonteNumeros_6
+    21300014: FonteNumeros_7
+    21300016: FonteNumeros_8
+    21300018: FonteNumeros_9
+    21300020: FonteNumeros_10
+    21300022: FonteNumeros_11
+    21300024: FonteNumeros_12
+    21300026: FonteNumeros_13
+    21300028: FonteNumeros_14
+    21300030: FonteNumeros_15
+    21300032: FonteNumeros_16
+    21300034: FonteNumeros_17
+    21300036: FonteNumeros_18
+    21300038: FonteNumeros_19
+    21300040: FonteNumeros_20
+    21300042: FonteNumeros_21
+    21300044: FonteNumeros_22
+    21300046: FonteNumeros_23
+    21300048: FonteNumeros_24
+    21300050: FonteNumeros_25
+    21300052: FonteNumeros_26
+    21300054: FonteNumeros_27
+    21300056: FonteNumeros_28
+    21300058: FonteNumeros_29
+    21300060: FonteNumeros_30
+    21300062: FonteNumeros_31
+    21300064: FonteNumeros_32
+    21300066: FonteNumeros_33
+    21300068: FonteNumeros_34
+    21300070: FonteNumeros_35
+    21300072: FonteNumeros_36
+    21300074: FonteNumeros_37
+    21300076: FonteNumeros_38
+    21300078: FonteNumeros_39
+    21300080: FonteNumeros_40
+    21300082: FonteNumeros_41
+    21300084: FonteNumeros_42
+    21300086: FonteNumeros_43
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FonteNumeros_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 904
+        width: 98
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 904
+        width: 75
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 906
+        width: 92
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_3
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 902
+        width: 93
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_4
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 905
+        width: 99
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_5
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 905
+        width: 92
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_6
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 903
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_7
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 908
+        width: 88
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_8
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 902
+        width: 92
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_9
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 903
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_10
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 904
+        width: 145
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_11
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 638
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_12
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 637
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_13
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 639
+        width: 92
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_14
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 635
+        width: 93
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_15
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 638
+        width: 99
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_16
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 638
+        width: 92
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_17
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 636
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_18
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 641
+        width: 88
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_19
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 635
+        width: 92
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_20
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 636
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_21
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 637
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_22
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 361
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_23
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 360
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_24
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 362
+        width: 92
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_25
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 358
+        width: 93
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_26
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 361
+        width: 99
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_27
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 361
+        width: 92
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_28
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 359
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_29
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 364
+        width: 88
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_30
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 358
+        width: 92
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_31
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 359
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_32
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 360
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_33
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 75
+        width: 98
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_34
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 74
+        width: 75
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_35
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 76
+        width: 92
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_36
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 72
+        width: 93
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_37
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 75
+        width: 99
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_38
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 75
+        width: 92
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_39
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 73
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_40
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 78
+        width: 88
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_41
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 72
+        width: 92
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_42
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 73
+        width: 95
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FonteNumeros_43
+      rect:
+        serializedVersion: 2
+        x: 1619
+        y: 74
+        width: 146
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -47,6 +47,7 @@ public class Jogador : MonoBehaviour {
 
 	//Outros
 	public	int		  vidas = 10;
+	public	int		  nJogador;
 
 	public GameObject[] respawnPoints;
 
@@ -197,14 +198,6 @@ public class Jogador : MonoBehaviour {
 		transform.Translate(direcaoMovimento, Space.World);
 	}
 
-	void Update () {
-		if(Physics.Linecast(transform.position, target.position)) {
-			Debug.Log("hitting");
-		} else {
-			Debug.Log("not hitting");
-		}
-	}
-
 	void LateUpdate() {
 		//Configurar a velocidade de rolamento
 		rolamentoVelocidade = movimentoVelocidade * rolamentoVelocidadeMultiplicador;
@@ -270,17 +263,6 @@ public class Jogador : MonoBehaviour {
 	void OnCollisionEnter (Collision other) {
 		if (other.transform.tag == "Movivel" && rolamentoTravar && other.transform.GetComponent<ParapeitoQuebrarSoco>() != null) {
 			other.transform.GetComponent<ParapeitoQuebrarSoco>().ParapeitoDestruir();
-		}
-		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
-			noChao = true;
-			_animator.ResetTrigger("NoAr");
-			puloPodePular = true;
-		}
-	}
-
-	void OnCollisionExit (Collision other) {
-		if(other.transform.tag == "Chao" || other.transform.tag == "Movivel") {
-			noChao = false;
 		}
 	}
 
@@ -354,7 +336,7 @@ public class Jogador : MonoBehaviour {
 			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
 			transform.position = novoRespawn.transform.position;
 			_animator.ResetTrigger("FritandoNoLaser");
-			vidas--;
+			vidas -= 1;
 			noChao = true;
 			laserFritando = false;
 			JogadorDescongelar();

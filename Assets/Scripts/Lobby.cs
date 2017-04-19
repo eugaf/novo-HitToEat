@@ -7,7 +7,7 @@ public class Lobby : MonoBehaviour {
 
 	public GameObject 				pPos, p, startButton, cancelButton, colorButton;
 	public GameObject[]				listaPersonagens, listaPaletas;
-	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials, baseMaterials;
+	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials;
 	public SkinnedMeshRenderer		personagemMaterial;
 	public int 						nListaPersonagens = 3, nMaterial, status, nPlayer;
 	public string					horizontal, a, b;
@@ -42,12 +42,9 @@ public class Lobby : MonoBehaviour {
 				smr.material = galinhaMaterials[nMaterial];
 				break;
 			case 3:
-				smr.material = baseMaterials[nMaterial];
-				break;
-			case 4:
 				smr.material = pedroMaterials[nMaterial];
 				break;
-			case 5:
+			case 4:
 				smr.material = zumbiMaterials[nMaterial];
 				break;
 			}
@@ -71,6 +68,7 @@ public class Lobby : MonoBehaviour {
 			status++;
 			if(status >= 1 && !cont) {
 				gcScript.nJogadores += 1;
+				gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
 				cont = true;
 			}
 			if(status == 3) {
@@ -111,39 +109,30 @@ public class Lobby : MonoBehaviour {
 		MudarSelecao();
 		Once();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-//		if(nListaPersonagens == 3) {
-//			SkinnedMeshRenderer smr = p.GetComponentInChildren<SkinnedMeshRenderer>();
-//			smr.material = baseMaterials[0];
-//			gcScript.personagensMaterial[nPlayer] = smr.material;
-//		}
-	}
 
 	void StartLevel() {
-		SceneManager.LoadScene(4);
-		gcScript.PreCena();
-//		int level = Random.Range(0,3);
-//
-//		switch(level) {
-//		case 0:
-//			SceneManager.LoadScene(2);
-//			gcScript.PreCena();
-//			break;
-//		case 1:
-//			SceneManager.LoadScene(3);
-//			gcScript.PreCena();
-//			break;
-//		case 2:
-//			SceneManager.LoadScene(4);
-//			gcScript.PreCena();
-//			break;
-//		case 3:
-//			SceneManager.LoadScene(5);
-//			gcScript.PreCena();
-//			break;
-//		}
+//		SceneManager.LoadScene(4);
+//		gcScript.PreCena();
+		int level = Random.Range(0,3);
+
+		switch(level) {
+		case 0:
+			SceneManager.LoadScene(2);
+			gcScript.PreCena();
+			break;
+		case 1:
+			SceneManager.LoadScene(3);
+			gcScript.PreCena();
+			break;
+		case 2:
+			SceneManager.LoadScene(4);
+			gcScript.PreCena();
+			break;
+		case 3:
+			SceneManager.LoadScene(5);
+			gcScript.PreCena();
+			break;
+		}
 	}
 
 	void MudarSelecao () {
@@ -183,10 +172,12 @@ public class Lobby : MonoBehaviour {
 		Destroy(p.gameObject);
 		nListaPersonagens = nListaPersonagens - 1;
 		if(nListaPersonagens < 0) {
-			nListaPersonagens = 5;
+			nListaPersonagens = 4;
 		}
+
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
 		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
+		gcScript.nPersonagens[nPlayer] = nListaPersonagens;
 		ArrumaPaleta(nListaPersonagens);
 		EscolhePaleta(nListaPersonagens);
 	}
@@ -194,12 +185,13 @@ public class Lobby : MonoBehaviour {
 	void MudaPersonagemDireita () {
 		Destroy(p.gameObject);
 		nListaPersonagens = nListaPersonagens + 1;
-		if(nListaPersonagens > 5) {
+		if(nListaPersonagens > 4) {
 			nListaPersonagens = 0;
 		}
 
 		p = Instantiate(listaPersonagens[nListaPersonagens].gameObject, pPos.transform.position, pPos.transform.rotation);
 		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[nListaPersonagens];
+		gcScript.nPersonagens[nPlayer] = nListaPersonagens;
 		ArrumaPaleta(nListaPersonagens);
 		EscolhePaleta(nListaPersonagens);
 	}
@@ -221,14 +213,10 @@ public class Lobby : MonoBehaviour {
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 3:
-			personagemMaterial.material = baseMaterials[0];
-			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
-			break;
-		case 4:
 			personagemMaterial.material = pedroMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
-		case 5:
+		case 4:
 			personagemMaterial.material = zumbiMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
@@ -257,14 +245,10 @@ public class Lobby : MonoBehaviour {
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 3:
-			personagemMaterial.material = baseMaterials[0];
-			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
-			break;
-		case 4:
 			personagemMaterial.material = pedroMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
-		case 5:
+		case 4:
 			personagemMaterial.material = zumbiMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
@@ -292,14 +276,10 @@ public class Lobby : MonoBehaviour {
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
 		case 3:
-			personagemMaterial.material = baseMaterials[0];
-			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
-			break;
-		case 4:
 			personagemMaterial.material = pedroMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
-		case 5:
+		case 4:
 			personagemMaterial.material = zumbiMaterials[nMaterial];
 			gcScript.personagensMaterial[nPlayer] = personagemMaterial.material;
 			break;
@@ -307,7 +287,7 @@ public class Lobby : MonoBehaviour {
 	}
 
 	void EscolhePaleta(int i) {
-		for(int j = 0; j < 6; j++) {
+		for(int j = 0; j < 5; j++) {
 			if(j == i) {
 				listaPaletas[j].SetActive(true);
 			} else {
@@ -319,9 +299,10 @@ public class Lobby : MonoBehaviour {
 	void CriaPersonagemLobby () {
 		p = Instantiate(listaPersonagens[3].gameObject, pPos.transform.position, pPos.transform.rotation);
 		SkinnedMeshRenderer skr = p.GetComponentInChildren<SkinnedMeshRenderer>();
-		skr.material = baseMaterials[0];
+		skr.material = pedroMaterials[0];
 		ArrumaPaleta(3);
-		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
+		gcScript.nPersonagens[nPlayer] = nListaPersonagens;
+//		gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
 	}
 
 	void CdInicial () {

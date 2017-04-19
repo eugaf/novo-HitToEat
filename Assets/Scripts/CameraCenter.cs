@@ -34,8 +34,12 @@ public class CameraCenter : MonoBehaviour {
 	void EncontrarPosicaoMedia() {
 		Vector3 center = new Vector3();
 
-		foreach (GameObject player in playerLista) {
-			center += player.transform.position;
+		if(playerLista.Length > 1) {
+			foreach (GameObject player in playerLista) {
+				center += player.transform.position;
+			}
+		} else {
+			center = playerLista[0].transform.position;
 		}
 
 		center.x = center.x / playerLista.Length;
