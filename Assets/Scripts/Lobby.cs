@@ -72,7 +72,7 @@ public class Lobby : MonoBehaviour {
 				cont = true;
 			}
 			if(status == 3) {
-				StartLevel();
+				gcScript.StartLevel();
 			}
 		}
 
@@ -108,31 +108,6 @@ public class Lobby : MonoBehaviour {
 		CdInicial ();
 		MudarSelecao();
 		Once();
-	}
-
-	void StartLevel() {
-//		SceneManager.LoadScene(4);
-//		gcScript.PreCena();
-		int level = Random.Range(0,3);
-
-		switch(level) {
-		case 0:
-			SceneManager.LoadScene(2);
-			gcScript.PreCena();
-			break;
-		case 1:
-			SceneManager.LoadScene(3);
-			gcScript.PreCena();
-			break;
-		case 2:
-			SceneManager.LoadScene(4);
-			gcScript.PreCena();
-			break;
-		case 3:
-			SceneManager.LoadScene(5);
-			gcScript.PreCena();
-			break;
-		}
 	}
 
 	void MudarSelecao () {

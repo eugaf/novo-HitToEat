@@ -223,6 +223,16 @@ public class Jogador : MonoBehaviour {
 	}
 		
 	//Triggers
+	void OnTriggerEnter (Collider other) {
+		if(other.tag == "Morte") {
+			GameObject novoRespawn = respawnPoints[Random.Range(0, respawnPoints.Length)];
+			transform.position = novoRespawn.transform.position;
+			_animator.ResetTrigger("FritandoNoLaser");
+			vidas -= 1;
+			noChao = true;
+		}
+	}
+
 	void OnTriggerStay (Collider col) {
 //		if(chaoCollider.tag == "Player" || chaoCollider.tag == "Movivel") {
 //			noChao = true;

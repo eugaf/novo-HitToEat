@@ -18,13 +18,6 @@ public class Menu : MonoBehaviour {
 		buttons[0].Select();
 	}
 
-	void Update () {
-		Debug.Log(check);
-//		if(check) {
-//			buttons[3].Select();
-//		}
-	}
-
 	public void AbreCreditos () {
 		buttons[3].Select();
 		check = true;

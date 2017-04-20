@@ -36,6 +36,7 @@ public class GameController : MonoBehaviour {
 	public GameObject[] respawns;
 
 	CameraCenter cam;
+	Trigger trig;
 
     bool gameOn = false;
 
@@ -61,6 +62,7 @@ public class GameController : MonoBehaviour {
     }
 
 	void FixedUpdate() {
+		Debug.Log(gameOn);
 //		Invoke("ChecarCena", .1f);
 		if(gameOn) {
 			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
@@ -84,10 +86,10 @@ public class GameController : MonoBehaviour {
 				for(int i = 0; i < 4; i++) {
 					if(p[i] != null) {
 						Jogador jogadorScript = p[i].GetComponent<Jogador>();
-						mensagem.SetActive(true);
+						trig = GameObject.FindGameObjectWithTag("Trigger").GetComponent<Trigger>();
+//						mensagem.SetActive(true);
 						int numero = i + 1;
-						Text msg = mensagem.GetComponentInChildren<Text>();
-						msg.text = "Player " + numero + " wins!";
+						trig.Fim(numero);
 //						Time.timeScale = 0;
 					}
 				}
@@ -95,6 +97,8 @@ public class GameController : MonoBehaviour {
 				if(Input.anyKey) {
 //					Time.timeScale = 1;
 					SceneManager.LoadScene("Menu");
+					nJogadores = 0;
+					gameOn = false;
 				}
 			}
 		}
@@ -102,13 +106,44 @@ public class GameController : MonoBehaviour {
 //		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
 	}
 
-	public void PreCena () {
-		Invoke("ChecarCena", .1f);
+	public void StartLevel() {
+		//		SceneManager.LoadScene(4);
+		//		gcScript.PreCena();
+		int level = Random.Range(3,6);
+		SceneManager.LoadScene(2);
+//		Invoke("ChecarCena", .1f);
+//		ChecarCena();
+//		Loader load;
+//		load = GameObject.FindGameObjectWithTag("Loader").GetComponent<Loader>();
+//		load.scene = level;
+
+		//		switch(level) {
+		//		case 0:
+		//			SceneManager.LoadScene(2);
+		//			gcScript.PreCena();
+		//			break;
+		//		case 1:
+		//			SceneManager.LoadScene(3);
+		//			gcScript.PreCena();
+		//			break;
+		//		case 2:
+		//			SceneManager.LoadScene(4);
+		//			gcScript.PreCena();
+		//			break;
+		//		case 3:
+		//			SceneManager.LoadScene(5);
+		//			gcScript.PreCena();
+		//			break;
+		//		}
 	}
+
+//	public void PreCena () {
+//		Invoke("ChecarCena", .1f);
+//	}
 
 	public void ChecarCena() {
 		string name = SceneManager.GetActiveScene().name;
-//        ChecarJogadores();
+//      ChecarJogadores();
 		CriaPersonagens();
 		if (name == "Cozinha" || name == "Banheiro" || name == "Quadra" || name == "Arena") {
             lasersLista = GameObject.FindGameObjectsWithTag("Laser");
@@ -119,8 +154,7 @@ public class GameController : MonoBehaviour {
 	void CriaPersonagens() {
 		cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 		respawns = GameObject.FindGameObjectsWithTag("Respawn");
-		mensagem = GameObject.FindGameObjectWithTag("Mensagem");
-		mensagem.SetActive(false);
+//		mensagem = GameObject.FindGameObjectWithTag("Mensagem");
 
 
 		HUDVidas = GameObject.FindGameObjectsWithTag("HUD").OrderBy(go => go.name).ToArray();
@@ -189,6 +223,7 @@ public class GameController : MonoBehaviour {
 //			Image vidas = hudScript.vidas.GetComponent<Image>();
 
 			HUD hudScript = HUDVidas[i].GetComponent<HUD>();
+//			mensagem.SetActive(false);
 			Image icone = hudScript.icones.GetComponent<Image>();
 			icone.sprite = hudScript.iconesImg[nPersonagens[i]];
 
