@@ -34,6 +34,7 @@ public class Loader : MonoBehaviour {
 
 	IEnumerator LoadNewScene () {
 		yield return new WaitForSeconds(3);
+		scene = Random.Range(3,6);
 		AsyncOperation async = Application.LoadLevelAsync(scene);
 		while(!async.isDone) {
 			yield return null;

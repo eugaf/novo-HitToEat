@@ -24,13 +24,6 @@ public class GameController : MonoBehaviour {
 	public int						nJogadores;
 	public int[]					nPersonagens;
 
-    //INPUTS
-//    public List<string> inputsPlayer1;
-//	public List<string> inputsPlayer2;
-//	public List<string> inputsPlayer3;
-//	public List<string> inputsPlayer4;
-//	public List<List<string>> Jogadores_INPUTS;
-
 	public string[] inputP1, inputP2, inputP3, inputP4;
 
 	public GameObject[] respawns;
@@ -62,7 +55,6 @@ public class GameController : MonoBehaviour {
     }
 
 	void FixedUpdate() {
-		Debug.Log(gameOn);
 //		Invoke("ChecarCena", .1f);
 		if(gameOn) {
 			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
@@ -87,15 +79,12 @@ public class GameController : MonoBehaviour {
 					if(p[i] != null) {
 						Jogador jogadorScript = p[i].GetComponent<Jogador>();
 						trig = GameObject.FindGameObjectWithTag("Trigger").GetComponent<Trigger>();
-//						mensagem.SetActive(true);
 						int numero = i + 1;
 						trig.Fim(numero);
-//						Time.timeScale = 0;
 					}
 				}
 
 				if(Input.anyKey) {
-//					Time.timeScale = 1;
 					SceneManager.LoadScene("Menu");
 					nJogadores = 0;
 					gameOn = false;
@@ -107,39 +96,8 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void StartLevel() {
-		//		SceneManager.LoadScene(4);
-		//		gcScript.PreCena();
-		int level = Random.Range(3,6);
 		SceneManager.LoadScene(2);
-//		Invoke("ChecarCena", .1f);
-//		ChecarCena();
-//		Loader load;
-//		load = GameObject.FindGameObjectWithTag("Loader").GetComponent<Loader>();
-//		load.scene = level;
-
-		//		switch(level) {
-		//		case 0:
-		//			SceneManager.LoadScene(2);
-		//			gcScript.PreCena();
-		//			break;
-		//		case 1:
-		//			SceneManager.LoadScene(3);
-		//			gcScript.PreCena();
-		//			break;
-		//		case 2:
-		//			SceneManager.LoadScene(4);
-		//			gcScript.PreCena();
-		//			break;
-		//		case 3:
-		//			SceneManager.LoadScene(5);
-		//			gcScript.PreCena();
-		//			break;
-		//		}
 	}
-
-//	public void PreCena () {
-//		Invoke("ChecarCena", .1f);
-//	}
 
 	public void ChecarCena() {
 		string name = SceneManager.GetActiveScene().name;

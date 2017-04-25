@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Lobby : MonoBehaviour {
 
-	public GameObject 				pPos, p, startButton, cancelButton, colorButton;
-	public GameObject[]				listaPersonagens, listaPaletas;
+	public GameObject 				pPos, p, startButton, cancelButton, colorButton, okButton;
+	public GameObject[]				listaPersonagens, listaPaletas, listaJogadores;
 	public Material[]				alienMaterials, astronautaMaterials, galinhaMaterials,  pedroMaterials, zumbiMaterials;
 	public SkinnedMeshRenderer		personagemMaterial;
-	public int 						nListaPersonagens = 3, nMaterial, status, nPlayer;
+	public int 						nListaPersonagens = 3, nMaterial, status, nPlayer, nOk;
 	public string					horizontal, a, b;
 
 	private float 	timer = 0, timerCall = .2f;
@@ -17,11 +17,9 @@ public class Lobby : MonoBehaviour {
 
 	GameController gcScript;
 
-
 	//Status 0 = Sem seleção; Status 1 = Seleciona personagem; Status 2 = Seleciona paleta
 
 	void Awake () {
-
 		for(int i = 0; i < listaPersonagens.Length; i++) {
 			listaPersonagens[i].transform.localScale = new Vector3(.59f, .59f, .59f);
 			Jogador jogadorScript = listaPersonagens[i].GetComponent<Jogador>();
@@ -53,6 +51,7 @@ public class Lobby : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		okButton.SetActive(false);
 		gcScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		CriaPersonagemLobby();
 		status = 0;
@@ -63,7 +62,7 @@ public class Lobby : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if(Input.GetAxisRaw(a) > 0.1f && !once && status < 3) {
+		if(Input.GetAxisRaw(a) > 0.1f && !once && status < 4) {
 			once = true;
 			status++;
 			if(status >= 1 && !cont) {
@@ -71,8 +70,18 @@ public class Lobby : MonoBehaviour {
 				gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
 				cont = true;
 			}
-			if(status == 3) {
-				gcScript.StartLevel();
+			if(status == 4 && gcScript.nJogadores > 1) {
+				for(int i = 0; i < gcScript.nJogadores; i++) {
+					Lobby lb;
+					lb = listaJogadores[i].GetComponent<Lobby>();
+					if(lb.status == 4) {
+						nOk ++;
+					}
+				}
+
+				if(nOk == gcScript.nJogadores) {
+					gcScript.StartLevel();
+				}
 			}
 		}
 
@@ -90,18 +99,26 @@ public class Lobby : MonoBehaviour {
 			startButton.SetActive(true);
 			cancelButton.SetActive(false);
 			colorButton.SetActive(false);
+			okButton.SetActive(false);
 			break;
 		case 1:
 			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
 			startButton.SetActive(false);
 			cancelButton.SetActive(true);
 			colorButton.SetActive(true);
+			okButton.SetActive(false);
 			break;
 		case 2:
 			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
 			startButton.SetActive(true);
 			cancelButton.SetActive(true);
 			colorButton.SetActive(false);
+			okButton.SetActive(false);
+			break;
+		case 3:
+			okButton.SetActive(true);
+			startButton.SetActive(true);
+			cancelButton.SetActive(true);
 			break;
 		}
 
