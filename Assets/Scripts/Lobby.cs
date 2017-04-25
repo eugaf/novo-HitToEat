@@ -13,7 +13,7 @@ public class Lobby : MonoBehaviour {
 	public string					horizontal, a, b;
 
 	private float 	timer = 0, timerCall = .2f;
-	private bool 	once = false, cont = false;
+	private bool 	once = false, cont = false, one;
 
 	GameController gcScript;
 
@@ -62,25 +62,20 @@ public class Lobby : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+//		Debug.Log(cont);
 		if(Input.GetAxisRaw(a) > 0.1f && !once && status < 4) {
 			once = true;
-			status++;
-			if(status >= 1 && !cont) {
+			if(status < 3) {
+				status++;
+			}
+			if(status > 0 && !cont) {
+				cont = true;
 				gcScript.nJogadores += 1;
 				gcScript.jogadoresPrefab[nPlayer] = listaPersonagens[3].gameObject;
-				cont = true;
 			}
-			if(status == 4 && gcScript.nJogadores > 1) {
-				for(int i = 0; i < gcScript.nJogadores; i++) {
-					Lobby lb;
-					lb = listaJogadores[i].GetComponent<Lobby>();
-					if(lb.status == 4) {
-						nOk ++;
-					}
-				}
-
-				if(nOk == gcScript.nJogadores) {
-					gcScript.StartLevel();
+			if(status == 3 && gcScript.nJogadores > 1) {
+				if(Input.GetAxisRaw(a) > 0.1f) {
+					status++;
 				}
 			}
 		}
@@ -88,7 +83,9 @@ public class Lobby : MonoBehaviour {
 		if(Input.GetAxisRaw(b) > 0.1f && !once && status > 0) {
 			once = true;
 			status--;
+//			Debug.Log(status);
 			if(status == 0 && cont) {
+//				Debug.Log("volto");
 				gcScript.nJogadores -= 1;
 				cont = false;
 			}
@@ -100,6 +97,7 @@ public class Lobby : MonoBehaviour {
 			cancelButton.SetActive(false);
 			colorButton.SetActive(false);
 			okButton.SetActive(false);
+			one = false;
 			break;
 		case 1:
 			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
@@ -107,6 +105,7 @@ public class Lobby : MonoBehaviour {
 			cancelButton.SetActive(true);
 			colorButton.SetActive(true);
 			okButton.SetActive(false);
+			one = false;
 			break;
 		case 2:
 			personagemMaterial = p.GetComponentInChildren<SkinnedMeshRenderer>();
@@ -114,11 +113,32 @@ public class Lobby : MonoBehaviour {
 			cancelButton.SetActive(true);
 			colorButton.SetActive(false);
 			okButton.SetActive(false);
+			one = false;
 			break;
 		case 3:
 			okButton.SetActive(true);
 			startButton.SetActive(true);
 			cancelButton.SetActive(true);
+			one = false;
+			break;
+		case 4: 
+			okButton.SetActive(true);
+			startButton.SetActive(true);
+			cancelButton.SetActive(true);
+			if(!one) {
+				for(int i = 0; i < gcScript.nJogadores; i++) {
+					Lobby lb;
+					lb = listaJogadores[i].GetComponent<Lobby>();
+					if(lb.status == 4) {
+						nOk ++;
+					}
+				}
+				one = true;
+			}
+
+			if(nOk == gcScript.nJogadores) {
+				gcScript.StartLevel();
+			}
 			break;
 		}
 
