@@ -15,7 +15,11 @@ public class Loader : MonoBehaviour {
 	void Start () {
 		gcScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
 		loadingText.text = "Loading...";
-		StartCoroutine(LoadNewScene());
+		if(gcScript.prevLevel == 0) {
+			StartCoroutine(LoadNewScene());
+		} else {
+			StartCoroutine(LoadMenu());
+		}
 
 	}
 	
@@ -30,6 +34,17 @@ public class Loader : MonoBehaviour {
 		if(loadScene) {
 			loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 		}
+	}
+
+	IEnumerator LoadMenu () {
+		yield return new WaitForSeconds(3);
+		scene = 0;
+		AsyncOperation async = Application.LoadLevelAsync(scene);
+		while(!async.isDone) {
+			yield return null;
+		}
+
+		yield return async;
 	}
 
 	IEnumerator LoadNewScene () {

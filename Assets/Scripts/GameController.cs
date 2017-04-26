@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour {
     public List<GameObject>			jogadoresLista;
 	public SkinnedMeshRenderer[]	personagensSMR;
 	public Material[]				personagensMaterial;
-	public int						nJogadores;
+	public int						nJogadores, prevLevel;
 	public int[]					nPersonagens;
 
 	public string[] inputP1, inputP2, inputP3, inputP4;
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour {
 	CameraCenter cam;
 	Trigger trig;
 
-    bool gameOn = false;
+    public bool gameOn = false;
 
 	string name;
 
@@ -59,7 +59,7 @@ public class GameController : MonoBehaviour {
 		if(gameOn) {
 			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 			cam.AchaJogadores();
-			for(int i = 0; i < nJogadores; i++) {
+			for(int i = 0; i < 4; i++) {
 				if(p[i] != null) {
 					Jogador jogadorScript = p[i].GetComponent<Jogador>();
 					HUD hudScript = HUDVidas[i].GetComponent<HUD>();
@@ -85,7 +85,8 @@ public class GameController : MonoBehaviour {
 				}
 
 				if(Input.anyKey) {
-					SceneManager.LoadScene("Menu");
+					prevLevel = 1;
+					SceneManager.LoadScene(2);
 					nJogadores = 0;
 					gameOn = false;
 				}
@@ -96,6 +97,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void StartLevel() {
+		prevLevel = 0;
 		SceneManager.LoadScene(2);
 	}
 

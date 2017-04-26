@@ -18,6 +18,7 @@ public class Laser : MonoBehaviour {
 		Linha.enabled = false;
 		podeDisparar = false;
 		danoAtivado = false;
+
 	}
 
 	void Update () {
