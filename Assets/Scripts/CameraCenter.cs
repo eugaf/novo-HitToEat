@@ -47,6 +47,7 @@ public class CameraCenter : MonoBehaviour {
 		center.z = center.z / playerLista.Length;
 		float distancia = -center.magnitude;
 
+
 		//Verificar os limites da camera
 		if (distancia < zoomMinimo) {
 			distancia = zoomMinimo;

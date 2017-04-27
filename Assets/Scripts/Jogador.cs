@@ -62,7 +62,7 @@ public class Jogador : MonoBehaviour {
 
 	//Audio
 	AudioSource 		audio;
-	public AudioClip 	pulo;
+	public AudioClip 	pulo, soco;
 
 	void Awake () {
 		singleton = this;
@@ -260,6 +260,7 @@ public class Jogador : MonoBehaviour {
 						if (col.tag == "Player") {
 							if (!col.GetComponent<Jogador>()._animator.GetBool("LevarSoco")) {
 								col.GetComponent<Jogador>()._animator.SetBool("LevarSoco",true);
+								audio.PlayOneShot(soco);
 							}
 						}
 						socoEstaSocando = false;

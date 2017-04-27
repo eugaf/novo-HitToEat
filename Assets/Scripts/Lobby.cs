@@ -121,7 +121,7 @@ public class Lobby : MonoBehaviour {
 			cancelButton.SetActive(true);
 			one = false;
 			break;
-		case 4: 
+		default: 
 			okButton.SetActive(true);
 			startButton.SetActive(true);
 			cancelButton.SetActive(true);

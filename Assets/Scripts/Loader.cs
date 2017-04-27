@@ -30,7 +30,6 @@ public class Loader : MonoBehaviour {
 //			loadingText.text = "Loading...";
 //			StartCoroutine(LoadNewScene());
 //		}
-
 		if(loadScene) {
 			loadingText.color = new Color(loadingText.color.r, loadingText.color.g, loadingText.color.b, Mathf.PingPong(Time.time, 1));
 		}
@@ -49,7 +48,10 @@ public class Loader : MonoBehaviour {
 
 	IEnumerator LoadNewScene () {
 		yield return new WaitForSeconds(3);
-		scene = Random.Range(3,6);
+		scene = Random.Range(3,7);
+		if(scene == 7) {
+			scene = Random.Range(3,6);
+		}
 		AsyncOperation async = Application.LoadLevelAsync(scene);
 		while(!async.isDone) {
 			yield return null;

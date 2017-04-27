@@ -35,6 +35,8 @@ public class GameController : MonoBehaviour {
 
 	string name;
 
+	float timer = 2f;
+	public bool timerOn = false;
 	void Awake () {
 		//Gerenciamento da instancia do GameController
 //		if (singleton == null) {
@@ -55,8 +57,14 @@ public class GameController : MonoBehaviour {
     }
 
 	void FixedUpdate() {
-//		Invoke("ChecarCena", .1f);
+		//		Invoke("ChecarCena", .1f);
+		if(timerOn) {
+			timer -= Time.deltaTime;
+		}
+
 		if(gameOn) {
+
+			Debug.Log(timer);
 			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 			cam.AchaJogadores();
 			for(int i = 0; i < 4; i++) {
@@ -84,11 +92,13 @@ public class GameController : MonoBehaviour {
 					}
 				}
 
-				if(Input.anyKey) {
+				if(Input.anyKey && timer < 0) {
 					prevLevel = 1;
 					SceneManager.LoadScene(2);
 					nJogadores = 0;
 					gameOn = false;
+					timerOn = false;
+					timer = 2f;
 				}
 			}
 		}
