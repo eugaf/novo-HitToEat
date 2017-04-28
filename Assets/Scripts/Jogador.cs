@@ -9,59 +9,58 @@ using System.Collections.Generic;
 public class Jogador : MonoBehaviour {
 	
 	//Inputs
-	public  static    Jogador   singleton;
-	public  string 	  axisJogadorVertical, axisJogadorHorizontal, axisJogadorPulo, axisJogadorSocoBotao, axisJogadorRolarBotao;
+	public  static		Jogador   singleton;
+	public  string		axisJogadorVertical, axisJogadorHorizontal, axisJogadorPulo, axisJogadorSocoBotao, axisJogadorRolarBotao;
 
 	//Movimento
 	[HideInInspector]
-	public  bool	  movimentoPode = true;
+	public  bool		movimentoPode = true;
 	public	bool		noChao;
 	[HideInInspector]
-	public  float	  movimentoVelocidadeInicial = 25f;
+	public  float		movimentoVelocidadeInicial = 25f;
 	[Range(0,10)]
-	public  float 	  movimentoVelocidade = 6f;
-	public  float	  vertical = 0, horizontal = 0, movimentoVelocidadeSocoEstaSocando = 2f, rotacaoVelocidade = 20f;
-	private	Vector3	  direcaoMovimento;
-	private bool	  jogadorCorrendo;
+	public  float		movimentoVelocidade = 6f;
+	public  float		vertical = 0, horizontal = 0, movimentoVelocidadeSocoEstaSocando = 2f, rotacaoVelocidade = 20f;
+	private	Vector3		direcaoMovimento;
+	private bool		jogadorCorrendo;
 
 	//Pulo
-	public 	bool	  puloPodePular = true;
-	public  float	  puloForca = 7f;
+	public 	bool		puloPodePular = true;
+	public  float		puloForca = 7f;
 	private bool		podePular = false;
 
 	//Soco
-	public  float	  socoForca = 500f;
+	public  float		socoForca = 500f;
 	[HideInInspector]
-	public  float 	  socoForcaInicio = 1f;
-	public  float 	  socoCarregarLimite = 3, socoIntervalo = 1f, socoCarregado = 0f;
-	public  bool 	  socoPodeSocar = false, socoEstaSocando = false;
-	private bool 	  socoCoroutine;
+	public  float		socoForcaInicio = 1f;
+	public  float		socoCarregarLimite = 3, socoIntervalo = 1f, socoCarregado = 0f;
+	public  bool		socoPodeSocar = false, socoEstaSocando = false;
+	private bool		socoCoroutine;
 
 	//Rolamento
-	private float	  rolamentoVelocidade, rolamentoVelocidadeMultiplicador = 0.25f;
-	private Vector3	  rolamentoMovimentoDirecao;
-	public  bool      rolamentoTravar;
+	private float		rolamentoVelocidade, rolamentoVelocidadeMultiplicador = 0.25f;
+	private Vector3		rolamentoMovimentoDirecao;
+	public  bool		rolamentoTravar;
 
 	//Laser
-	public  bool	  laserFritando = false;
+	public  bool		laserFritando = false;
 
 	//Outros
-	public	int		  vidas = 10;
-	public	int		  nJogador;
+	public	int			vidas = 10, nJogador;
 
 	public GameObject[] respawnPoints;
 
 	//Componentes
-	private Rigidbody _rigidbody;
-	public  Animator  _animator;
-	public  SocoAnimacaoResetar[] socoAnimacao;
-	public  JogadorLevantandoStateMachine jogadorLevantandoAnimacao;
-	public  JogadorDashStateMachine jogadorDashAnimacao;
+	private AudioSource						audio;
+	private Rigidbody						_rigidbody;
+	public  Animator						_animator;
+	public  SocoAnimacaoResetar[]			socoAnimacao;
+	public  JogadorLevantandoStateMachine	jogadorLevantandoAnimacao;
+	public  JogadorDashStateMachine			jogadorDashAnimacao;
 
-	public Transform target;
+//	public Transform target;
 
 	//Audio
-	AudioSource 		audio;
 	public AudioClip 	pulo, soco;
 
 	void Awake () {
@@ -167,7 +166,7 @@ public class Jogador : MonoBehaviour {
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direcaoMovimento), Time.deltaTime * rotacaoVelocidade);
 		}
 
-		if(Input.GetAxisRaw(axisJogadorPulo) != 0 && noChao && !laserFritando){
+		if(Input.GetAxisRaw(axisJogadorPulo) != 0 && noChao && !laserFritando && puloPodePular){
 			if(!podePular) {
 				podePular = true;
 				puloPodePular = false;

@@ -52,6 +52,8 @@ public class Loader : MonoBehaviour {
 		if(scene == 7) {
 			scene = Random.Range(3,6);
 		}
+
+		scene = 5;
 		AsyncOperation async = Application.LoadLevelAsync(scene);
 		while(!async.isDone) {
 			yield return null;

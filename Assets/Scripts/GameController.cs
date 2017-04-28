@@ -63,8 +63,6 @@ public class GameController : MonoBehaviour {
 		}
 
 		if(gameOn) {
-
-			Debug.Log(timer);
 			cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraCenter>();
 			cam.AchaJogadores();
 			for(int i = 0; i < 4; i++) {
